@@ -1,0 +1,53 @@
+\appendix
+\section{WSCG Weight Sensitivity}\label{sec:sensitivity}
+
+The parse does not depend on the weights, so each scheme only re-weights the
+graph and refits the stratified models. Perturbations move a whole tier at a
+time, clamped to $[0.0, 5.0]$, with the zero background class held fixed. Three
+designs give 123 schemes: a uniform shift of all tiers, a shift of one tier at a
+time, and 100 Monte Carlo draws with each tier drawn independently from
+$[-1, +1]$. Recomputing WSCG from the cached parse at zero perturbation reproduces the
+published indicators ($r = 0.999987$ depth, $r = 1.000000$ nodes) and the
+published fit exactly. All three primary conclusions hold in 123/123 schemes: the
+test rejects homogeneity (worst case $p = 1.26\times10^{-77}$), STEM $R^{2}$
+exceeds non-STEM $R^{2}$ throughout ($0.077$--$0.083$ against $0.031$--$0.043$),
+and the Syntactic MDD divergence stays positive at $p < 0.01$, $Z$ over
+$[3.22, 4.54]$. The 0.5 tier is the most consequential, nouns being 23.9\% of all
+747,736 tokens; the 5.0 tier is inert here. The grid ships with the code.
+
+\section{Robustness and Diagnostics}\label{sec:robustness}
+
+\paragraph{Overfitting in per-subject regressions.} Under 20 repeats of 5-fold
+cross-validation \citep{stone1974} only three subjects retain positive
+out-of-sample fit, all among the larger pools: the classic small-$N$,
+many-predictor failure mode \citep{babyak2004,yarkoni2017}. Partition-level fits
+do not suffer from it, with cross-validated $R^{2}$ of $0.0732$ (STEM) and
+$0.0361$ (non-STEM) against in-sample $0.0792$ and $0.0380$.
+
+\paragraph{Residual diagnostics.} Residuals are right-skewed and mildly
+leptokurtic in every partition (skew $1.37$, $0.89$, $1.53$), Jarque--Bera
+rejects normality in all three (all $p < 10^{-90}$), and Breusch--Pagan
+\citep{breusch1979} and White's test \citep{white1980} both reject
+homoskedasticity (LM $130.70$, $42.05$, $120.84$; all $p < 10^{-5}$). HC3 errors
+are therefore necessary, and the normal-theory likelihood underlying $\Lambda$ is
+misspecified: hence the Wald and permutation tests carry the argument.
+
+
+\paragraph{IRT model specification.} Refitting difficulty under a Rasch (1PL)
+model \citep{rasch1960} gives difficulties correlated with the 2PL estimates at
+$r = 0.894$, and the domain contrast is if anything stronger ($0.1038$ against
+$0.0676$, $W(9) = 167.21$, $p = 2.4\times10^{-31}$). The conclusion does not
+depend on letting discrimination vary.
+
+\paragraph{Split-half replication.} Rerunning the whole stratified analysis on
+each random half reproduces the pattern (Half A: $0.0893$ against $0.0390$;
+Half B: $0.0729$ against $0.0389$; both $p < 10^{-9}$). Over 20 splits, giving 40
+half-samples, STEM $R^{2}$ exceeds non-STEM $R^{2}$ in 40 of 40, all rejecting
+coefficient equality at $p < 0.001$.
+
+\paragraph{Reproducibility.} The pipeline ships as 19 numbered scripts and a
+driver taking a stage range, with the indicators, IRT estimates, cached parses
+and the exact result files reproduced here. A master seed in \texttt{config.py}
+supplies independent streams to the bootstrap, permutation, cross-validation and
+split-half routines, so rerunning one script cannot perturb another's. A full run
+from the shipped caches takes 36 minutes on a 6-core laptop with no GPU.

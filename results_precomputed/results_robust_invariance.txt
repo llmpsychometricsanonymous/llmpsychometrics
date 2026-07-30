@@ -1,0 +1,61 @@
+ROBUST INVARIANCE TESTING
+
+CROSS-GROUP COEFFICIENT TESTS WITH MULTIPLICITY CONTROL
+Nine simultaneous Clogg et al. (1995) Z-tests; Holm-Bonferroni and Benjamini-Hochberg applied to the family.
+
+Indicator                |   delta b |       SE |       Z |    p (raw) |   p (Holm) |     p (BH) | Holm |
+---------------------------------------------------------------------------------------------------------
+WSCG_Depth               |   -0.0017 |   0.0223 |  -0.078 |  9.377e-01 |  1.000e+00 |  9.377e-01 |   no |
+WSCG_Nodes               |    0.0197 |   0.0067 |   2.926 |  3.431e-03 |  2.059e-02 |  6.782e-03 |  yes |
+Syntactic_MDD            |    0.3548 |   0.0877 |   4.046 |  5.209e-05 |  3.646e-04 |  1.563e-04 |  yes |
+Syntactic_Depth          |   -0.0713 |   0.0395 |  -1.808 |  7.068e-02 |  2.827e-01 |  1.060e-01 |   no |
+Knowledge_Zipf_Rarity    |    0.3044 |   0.1051 |   2.897 |  3.768e-03 |  2.059e-02 |  6.782e-03 |  yes |
+Knowledge_NER_Density    |    0.0354 |   0.0050 |   7.033 |  2.026e-12 |  1.824e-11 |  1.824e-11 |  yes |
+Semantic_Concreteness    |   -0.7525 |   0.1525 |  -4.936 |  7.977e-07 |  6.382e-06 |  3.590e-06 |  yes |
+AMR_Depth                |   -0.0084 |   0.0301 |  -0.280 |  7.794e-01 |  1.000e+00 |  8.768e-01 |   no |
+Adversarial_Score        |   -0.0167 |   0.0199 |  -0.836 |  4.029e-01 |  1.000e+00 |  5.180e-01 |   no |
+
+Surviving Holm at alpha = 0.05: WSCG_Nodes, Syntactic_MDD, Knowledge_Zipf_Rarity, Knowledge_NER_Density, Semantic_Concreteness
+Surviving Benjamini-Hochberg at q = 0.05: WSCG_Nodes, Syntactic_MDD, Knowledge_Zipf_Rarity, Knowledge_NER_Density, Semantic_Concreteness
+
+JOINT WALD TEST OF COEFFICIENT EQUALITY (HC3 THROUGHOUT)
+W = (b_STEM - b_nonSTEM)' [V_STEM + V_nonSTEM]^-1 (b_STEM - b_nonSTEM), with V the HC3 covariance of each partition. The partitions are disjoint, so the two covariance matrices add.
+  Slopes only:            W = 138.3586, df = 9, p = 2.251e-25
+  Slopes plus intercept:  W = 375.7612, df = 10, p = 1.346e-74
+
+NORMAL-THEORY LIKELIHOOD RATIO TEST (reference)
+  Lambda = 454.8637, df = 11, p = 1.328e-90
+  STEM R2 = 0.079216, non-STEM R2 = 0.037999, gap = 0.041216
+  Cohen's q (domain level) = 0.0918
+
+OLS RESIDUAL DIAGNOSTICS
+Partition  |    skew |  ex.kurt |  Jarque-Bera |       JB p | Breusch-Pagan |       BP p |    White p |
+-------------------------------------------------------------------------------------------------------
+Pooled     |  1.3660 |   1.0865 |      5057.71 |  0.000e+00 |        130.70 |  8.517e-24 |  9.305e-42 |
+STEM       |  0.8927 |   0.1013 |       420.16 |  5.799e-92 |         42.05 |  3.222e-06 |  1.880e-03 |
+non-STEM   |  1.5343 |   1.6991 |      5581.94 |  0.000e+00 |        120.84 |  8.991e-22 |  1.343e-27 |
+Residuals are right-skewed and leptokurtic relative to the normal, and Breusch-Pagan and White both reject homoskedasticity in every partition. The normal-theory likelihood the LRT rests on is therefore misspecified, which is exactly why the HC3 Wald test above, the bootstrap below and the permutation null are the load-bearing inference and the LRT is retained only for comparability with the multi-group SEM literature.
+
+NONPARAMETRIC BOOTSTRAP (1000 stratified item resamples)
+Quantity               |   observed |  boot mean |    boot SD |       2.5% |      97.5% |
+-----------------------------------------------------------------------------------------
+Lambda (LRT)           |   454.8637 |   467.3898 |    49.4014 |   374.9501 |   565.3490 |
+STEM R2                |     0.0792 |     0.0826 |     0.0100 |     0.0641 |     0.1033 |
+non-STEM R2            |     0.0380 |     0.0390 |     0.0036 |     0.0322 |     0.0464 |
+R2 gap                 |     0.0412 |     0.0436 |     0.0106 |     0.0223 |     0.0651 |
+Cohen's q              |     0.0918 |     0.0954 |     0.0212 |     0.0519 |     0.1358 |
+Bootstrap replicates with LRT p < 0.001: 100.000%
+Bootstrap replicates with STEM R2 > non-STEM R2: 100.000%
+
+LABEL-PERMUTATION TEST (10000 permutations of the STEM/non-STEM assignment)
+  Observed R2 gap:      0.041216
+  Permutation null gap: mean 0.002012, SD 0.007191, 95th pct of |gap| 0.014720, max |gap| 0.031492
+  Two-sided p (gap):    9.999e-05 (0 of 10000 permutations matched or exceeded the observed gap)
+  Observed Lambda:      454.8637
+  Permutation null Lambda: mean 12.0004, SD 5.6538, max 48.6265
+  One-sided p (Lambda): 9.999e-05
+
+SAMPLE SIZE AND POWER
+  STEM     : N =  3153, f2 = 0.0860, power at alpha = 0.05 is 1.0000; minimum detectable f2 at 80% power is 0.00499 (R2 = 0.00497)
+  non-STEM : N = 10889, f2 = 0.0395, power at alpha = 0.05 is 1.0000; minimum detectable f2 at 80% power is 0.00144 (R2 = 0.00144)
+  Pooled   : N = 14042, f2 = 0.0371, power at alpha = 0.05 is 1.0000; minimum detectable f2 at 80% power is 0.00112 (R2 = 0.00111)

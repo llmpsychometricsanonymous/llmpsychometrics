@@ -1,0 +1,104 @@
+% TACL submission (anonymous). Compile: pdflatex -> bibtex -> pdflatex x2
+\documentclass[11pt,a4paper]{article}
+\usepackage{times,latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{microtype}
+
+% Submission mode: anonymous, line numbers, confidentiality header.
+\usepackage[]{tacl2021v1}
+
+% ---------------------------------------------------------------------------
+% Vertical-spacing discipline.
+%
+% tacl2021v1.sty sets \flushbottom (line 138), which forces every column to be
+% justified to the full text height. When a column is short, TeX stretches
+% whatever glue it can find -- display-math skips, section skips, float
+% separations -- producing large gaps around headings and equations. Switching
+% to \raggedbottom lets the slack collect harmlessly at the column foot instead
+% of being injected into the body. The float and display glue below is then
+% given little or no stretch so that what remains is predictable.
+% ---------------------------------------------------------------------------
+\raggedbottom
+
+\setlength{\abovedisplayskip}{5pt plus 1pt minus 2pt}
+\setlength{\belowdisplayskip}{5pt plus 1pt minus 2pt}
+\setlength{\abovedisplayshortskip}{0pt plus 1pt}
+\setlength{\belowdisplayshortskip}{3pt plus 1pt minus 2pt}
+
+\setlength{\textfloatsep}{10pt plus 2pt minus 3pt}
+\setlength{\dbltextfloatsep}{10pt plus 2pt minus 3pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+% Float placement. The defaults (at most 2 double-column floats per page top,
+% occupying at most 0.7 of the height) leave this paper's float queue congested:
+% appendix tables get deferred past the bibliography onto pages of their own.
+% Relaxing the limits lets the queue drain onto the pages that introduce it.
+\setcounter{topnumber}{4}
+\setcounter{dbltopnumber}{4}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{6}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\dbltopfraction}{0.92}
+\renewcommand{\bottomfraction}{0.5}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.7}
+\renewcommand{\dblfloatpagefraction}{0.7}
+
+% Float-only pages: align floats to the top instead of letting LaTeX centre
+% them between large stretches of \@fptop/\@fpbot glue.
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{8pt plus 1fil}
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpsep}{8pt plus 1fil}
+\makeatother
+
+% Let inline math break across lines. Long unbreakable math atoms in narrow
+% columns were forcing very loose (underfull) lines.
+\relpenalty=500
+\binoppenalty=700
+
+% Discourage orphaned headings and single-line widows/orphans.
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+
+% Keep author-identifying metadata out of the PDF itself.
+\hypersetup{pdfauthor={},pdfsubject={},pdfkeywords={},pdfcreator={},pdfproducer={}}
+
+\title{What Does MMLU Actually Measure? \\ A Psychometric Diagnosis of Aggregate Benchmark Scores}
+
+% Author information is suppressed in submission mode by tacl2021v1.sty,
+% which prints "Anonymous TACL submission" in its place.
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+What does the aggregate MMLU score actually measure? We answer the question psychometrically. Item difficulty is calibrated with a 2PL IRT model fitted to 1,000 open-weights language models over all 14,042 MMLU test items, and difficulty is then regressed on a deterministic, text-extractable framework of five dimensions and nine indicators: topological reasoning load, syntactic dependency structure, epistemological specificity, semantic abstractness, and adversarial negation scope. The mapping from structural complexity to difficulty is then tested for invariance across MMLU's own STEM and non-STEM partitions.
+
+Invariance is rejected decisively. A joint Wald test built on heteroskedasticity-consistent covariances gives $W(9) = 138.36$, $p = 2.3 \times 10^{-25}$, and a 10,000-draw label permutation places the observed between-domain divergence beyond every draw of its own null ($p < 10^{-4}$). Structural complexity explains roughly twice as much cross-validated difficulty variance in STEM as outside it ($R^{2}_{\mathrm{cv}} = 0.073$ against $0.036$), and between $2.5$ and $3.8$ times as much as a word-count-plus-readability baseline. The divergence replicates in 40 of 40 random half-samples and survives refitting difficulty under a Rasch model.
+
+The consequences are practical. Aggregate leaderboard rank tracks non-STEM accuracy more closely than STEM accuracy (weighted Kendall $\tau_{w} = 0.9887$ against $0.9634$), so selecting a Top-50 model on the aggregate for a reasoning-intensive deployment displaces 22\% of the STEM-appropriate choices, and higher-ability models degrade more steeply under reasoning depth once floor-constrained models are removed ($r = -0.40$ to $-0.51$; $-0.77$ in the uncorrected full sample). The MMLU aggregate weights retrieval capacity and reasoning stability unequally. We release the framework as a reproducible auditing instrument and recommend disaggregated reporting.
+\end{abstract}
+
+\input{body}
+
+\bibliography{refs}
+\bibliographystyle{acl_natbib}
+
+% TACL requires appendices to follow the text and the references.
+\input{appendix}
+
+\end{document}

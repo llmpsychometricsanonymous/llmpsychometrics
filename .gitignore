@@ -1,0 +1,12 @@
+resources/model_stog/pytorch_model.bin
+
+__pycache__/
+*.pyc
+
+results/
+
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out

@@ -1,0 +1,48 @@
+IRT SPECIFICATION AND REPLICATION CHECKS
+
+1PL (RASCH) VERSUS 2PL DIFFICULTY
+  Items compared: 14042
+  Pearson  r(b_2PL, b_1PL) = 0.894233 (p = 0.000e+00)
+  Spearman rho             = 0.933008
+  b_1PL range: [-3.5044, 5.6189], mean -0.1113, SD 1.7923
+
+Domain analysis on 2PL difficulty (published):
+  N: STEM 3153, non-STEM 10889
+  STEM R2 = 0.079216, non-STEM R2 = 0.037999, gap = 0.041216
+  Wald (HC3, 9 df) = 138.3586, p = 2.251e-25
+  Lambda (11 df)   = 454.8637, p = 1.328e-90
+  Z(Syntactic MDD) = 4.0461   Z(Entity Density) = 7.0327
+
+Domain analysis on 1PL difficulty:
+  N: STEM 3153, non-STEM 10889
+  STEM R2 = 0.103791, non-STEM R2 = 0.067592, gap = 0.036199
+  Wald (HC3, 9 df) = 167.2074, p = 2.354e-31
+  Lambda (11 df)   = 554.7233, p = 6.688e-112
+  Z(Syntactic MDD) = 3.0103   Z(Entity Density) = 9.3331
+
+RANDOM SPLIT-HALF REPLICATION OF THE DOMAIN ANALYSIS
+Items are split at random into two disjoint halves; the whole domain-stratified analysis is re-run on each independently.
+
+Half A:
+  N: STEM 1545, non-STEM 5476
+  STEM R2 = 0.089277, non-STEM R2 = 0.039046, gap = 0.050231
+  Wald (HC3, 9 df) = 80.2487, p = 1.442e-13
+  Lambda (11 df)   = 228.1186, p = 1.048e-42
+  Z(Syntactic MDD) = 3.3736   Z(Entity Density) = 4.4472
+
+Half B:
+  N: STEM 1608, non-STEM 5413
+  STEM R2 = 0.072853, non-STEM R2 = 0.038877, gap = 0.033977
+  Wald (HC3, 9 df) = 63.9991, p = 2.258e-10
+  Lambda (11 df)   = 233.6357, p = 7.387e-44
+  Z(Syntactic MDD) = 2.4819   Z(Entity Density) = 5.5616
+
+Both halves show STEM R2 > non-STEM R2 and reject coefficient equality at p < 0.001: True
+
+20 independent random splits (40 half-samples):
+  STEM R2:     mean 0.0824, range [0.0601, 0.1150]
+  non-STEM R2: mean 0.0387, range [0.0297, 0.0487]
+  Half-samples with STEM R2 > non-STEM R2: 40/40
+  Half-samples rejecting coefficient equality at p < 0.001: 40/40
+  Z(Syntactic MDD) range: [1.436, 4.116]
+  Z(Entity Density) range: [2.814, 7.205]

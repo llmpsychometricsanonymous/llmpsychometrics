@@ -1,0 +1,37 @@
+# Python 3.9 or newer.
+#
+# The SpaCy English model is not a PyPI package and is not installed by this
+# file. Fetch it once after installing the requirements:
+#
+#     python -m spacy download en_core_web_sm
+#
+# Stage 5 will attempt the same download itself if the model is missing.
+
+pandas
+numpy
+scipy
+scikit-learn
+statsmodels
+seaborn
+matplotlib
+tqdm
+openpyxl
+
+jax
+jaxlib
+numpyro
+
+stanza
+spacy
+wordfreq
+networkx
+
+amrlib
+penman
+torch
+
+sentence-transformers
+datasets
+huggingface_hub
+requests
+pyarrow

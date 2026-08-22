@@ -1,0 +1,13 @@
+resources/model_stog/pytorch_model.bin
+
+__pycache__/
+*.pyc
+
+results/
+raw_data/hellaswag_fetch_cache/
+
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out

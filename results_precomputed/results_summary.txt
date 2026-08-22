@@ -1,0 +1,2265 @@
+RESULTS SUMMARY
+
+IRT CALIBRATION VALIDITY STATISTICS
+
+  Total Models           : 1000
+  Total Items            : 14042
+
+ Item Difficulty (b-parameter)
+    Mean: 0.0433 | Std: 2.2404
+    Min:  -4.9956 | Max: 7.1209
+
+ Item Discrimination (a-parameter)
+    Mean: 1.8480 | Std: 1.4619
+    Min:  0.0037 | Max: 6.0713
+
+ Model Abilities (theta-parameter)
+    Mean: -0.0428 | Std: 1.0307
+    Min:  -2.0206 | Max: 3.1440
+
+ Domain-Stratified Difficulty
+    STEM     Mean: 0.5891 | Std: 2.3772
+    Non-STEM Mean: -0.1148 | Std: 2.1740
+
+
+
+DIMENSION 1 - REASONING COMPLEXITY
+
+ WSCG_Nodes
+    Max: 396.0000 | Min: 0.0000
+    Mean: 20.7175
+
+ WSCG_Depth
+    Max: 32.5000 | Min: 0.0000
+    Mean: 4.0934
+
+
+
+DIMENSION 2 - SYNTACTIC COMPLEXITY
+
+ Syntactic_MDD
+    Max: 7.0541 | Min: 0.0000
+    SD:  0.6419
+
+ Syntactic_Depth
+    Max: 19.0000 | Min: 0.0000
+    SD:  1.9063
+
+
+
+DIMENSION 3 - KNOWLEDGE SPECIFICITY
+
+ Knowledge_NER_Density
+    Max: 100.0000 | Min: 0.0000
+    Mean: 6.9871
+
+ Knowledge_Zipf_Rarity
+    Max: 6.8600 | Min: 2.0400
+    Mean: 3.5150
+
+
+
+DIMENSION 4 - SEMANTIC COMPLEXITY
+
+ Semantic_Concreteness
+    Max: 4.8000 | Min: 1.3150
+    Mean: 2.3559
+
+ AMR_Depth
+    Max: 17.0000 | Min: 2.0000
+    Mean: 6.1402
+
+
+
+DIMENSION 5 - ADVERSARIAL NEGATIONS
+
+ word_count
+    Max: 877.0000 | Min: 1.0000
+    Mean: 53.2500
+
+ Adversarial_Score
+    Max: 55.7864 | Min: -23.8846
+    Mean: -0.0000
+
+
+
+GLOBAL PATH ANALYSIS RESULTS
+
+
+Residual Standard Error (RSE):   2.200796
+R-squared:                       0.035727
+Adjusted R-squared:              0.035109
+F-statistic:                     F(9, 14032) = 63.1760 (p = 2.738e-114)
+Cohen's f2:                      0.037051
+
+Variable                       | b (unstd.)   |         SE |    Beta* |          t |            p |
+-----------------------------------------------------------------------------------------------
+(Intercept)                    | -2.397478    |   0.261954 |      --- |    -9.1523 |    5.574e-20 |
+WSCG_Depth                     | 0.069587     |   0.006363 |   0.1186 |    10.9357 |    7.780e-28 | ***
+WSCG_Nodes                     | -0.002307    |   0.001143 |  -0.0290 |    -2.0175 |    4.365e-02 | *
+Syntactic_MDD                  | 0.165416     |   0.037125 |   0.0474 |     4.4556 |    8.366e-06 | ***
+Syntactic_Depth                | 0.002722     |   0.014707 |   0.0023 |     0.1851 |    8.532e-01 |
+Knowledge_Zipf_Rarity          | 0.097114     |   0.045153 |   0.0178 |     2.1508 |    3.149e-02 | *
+Knowledge_NER_Density          | 0.010832     |   0.002129 |   0.0445 |     5.0867 |    3.644e-07 | ***
+Semantic_Concreteness          | 0.412694     |   0.064718 |   0.0539 |     6.3768 |    1.809e-10 | ***
+AMR_Depth                      | 0.051648     |   0.011930 |   0.0439 |     4.3292 |    1.497e-05 | ***
+Adversarial_Score              | -0.023218    |   0.004627 |  -0.0437 |    -5.0181 |    5.218e-07 | ***
+
+Significance codes: *** p < 0.001, ** p < 0.01, * p < 0.05
+
+
+DOMAIN INVARIANCE (STEM vs Non-STEM)
+
+
+STEM Group Size (N1):        3153
+Non-STEM Group Size (N2):    10889
+STEM R-squared:              0.079216
+Non-STEM R-squared:          0.037999
+Restricted Log-Likelihood:   -30996.3313 (Pooled Model)
+Unrestricted Log-Likelihood: -30768.8995 (STEM + Non-STEM Models)
+Likelihood Ratio Test (LRT): Chi2 = 454.8637 on 11 DF
+LRT p-value:                 1.328e-90
+
+Indicator                    | STEM b     | STEM Beta* | non-STEM b   |   NS Beta* |         Z-stat |
+----------------------------------------------------------------------------------------------
+WSCG_Depth                   | 0.0602     |     0.0734 | 0.0620       |     0.1151 |        -0.0782 |
+WSCG_Nodes                   | 0.0189     |     0.0879 | -0.0007      |    -0.0103 |      2.9262 ** |
+Syntactic_MDD                | 0.3694     |     0.1023 | 0.0146       |     0.0043 |     4.0461 *** |
+Syntactic_Depth              | -0.0584    |    -0.0369 | 0.0130       |     0.0119 |        -1.8075 |
+Knowledge_Zipf_Rarity        | 0.2523     |     0.0474 | -0.0521      |    -0.0095 |      2.8970 ** |
+Knowledge_NER_Density        | 0.0356     |     0.1403 | 0.0002       |     0.0009 |     7.0327 *** |
+Semantic_Concreteness        | -0.1642    |    -0.0214 | 0.5883       |     0.0778 |    -4.9359 *** |
+AMR_Depth                    | 0.0523     |     0.0346 | 0.0608       |     0.0553 |        -0.2802 |
+Adversarial_Score            | -0.0343    |    -0.0325 | -0.0177      |    -0.0376 |        -0.8365 |
+
+Significance codes: *** p < 0.001, ** p < 0.01, * p < 0.05
+
+
+RETRIEVAL-REASONING CONSTRUCT ANALYSIS
+
+
+STEIGER'S DEPENDENT CORRELATION TEST (Raw Accuracy %)
+ Correlation: Overall ~ Non-STEM Accuracy (r12): 0.999122
+ Correlation: Overall ~ STEM Accuracy (r13):     0.983994
+ Cross-correlation: Non-STEM ~ STEM (r23):       0.975663
+ Steiger's Z-statistic:  208.2585
+ Steiger's p-value:      0.000e+00
+
+REASONING STABILITY INVERSION
+ Pearson r(theta, reasoning_sensitivity):  r = -0.772006
+ p-value:                                  p = 1.265e-198
+
+SYSTEMATIC TRIMMING ANALYSIS (FLOOR EFFECT CONTROL)
+ Top 75% Models (theta >= -0.652, N=750): r = -0.512065, p = 2.294e-51
+ Top 50% Models (theta >= -0.072, N=500): r = -0.396580, p = 2.792e-20
+
+
+ROBUSTNESS CHECKS (IRT INVARIANCE, COLLINEARITY & RANK INVARIANCE)
+
+
+
+FEATURE COLLINEARITY & VIF
+
+
+Variance Inflation Factors (VIF):
+               Indicator    VIF
+1             WSCG_Depth  1.773
+2             WSCG_Nodes  2.379
+3          Syntactic_MDD  1.566
+4        Syntactic_Depth  2.108
+5  Knowledge_Zipf_Rarity  1.055
+6  Knowledge_NER_Density  1.028
+7  Semantic_Concreteness  1.101
+8              AMR_Depth  1.386
+9      Adversarial_Score  1.025
+
+IRT PARAMETER INVARIANCE & CROSS-COHORT STABILITY
+
+
+Pearson Correlation of Item Difficulty (b) between Cohort 1 (500 models) and Cohort 2 (500 models): 0.9921 (p = 0.00e+00)
+
+
+CTT RANK INVARIANCE (WEIGHTED KENDALL'S TAU)
+
+
+Overall vs Non-STEM: Weighted Kendall tau_w = 0.9887
+Overall vs STEM:     Weighted Kendall tau_w = 0.9634
+
+
+TOP-K MODEL SELECTION OVERLAP
+
+
+Top 10 Models:
+  - Overlap with Top 10 Non-STEM: 100.0% (10/10)
+  - Overlap with Top 10 STEM:     80.0% (8/10) [Missed 2 model(s)]
+Top 50 Models:
+  - Overlap with Top 50 Non-STEM: 92.0% (46/50)
+  - Overlap with Top 50 STEM:     78.0% (39/50) [Yielding a 22.0% false-positive rate]
+
+
+UNINTERRUPTED RANK DISPLACEMENT (TOP-40 CANDIDATE POOL)
+
+
+Model Name                                    | Overall | Non-STEM | STEM   | Displacement | CTT Gap (%)
+----------------------------------------------------------------------------------------------------------
+CausalLM/34b-beta                             |       1 |        1 |      1 |           +0 | -
+Qwen/Qwen2-72B                                |       2 |        3 |      2 |           +0 |       2.37%
+NeverSleep/CausalLM-RP-34B                    |       3 |        2 |      3 |           +0 |       0.19%
+Qwen/Qwen1.5-110B                             |       4 |        4 |      4 |           +0 |       3.01%
+MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.3   |       5 |        7 |      7 |           -2 |       0.65%
+MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.4   |       6 |        8 |      5 |           +1 |       0.01%
+MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2   |       7 |        9 |      6 |           +1 |       0.07%
+NeverSleep/Llama-3-Lumimaid-70B-v0.1-alt      |       8 |        5 |     17 |           -9 |       0.06%
+mmnga/Llama-3-70B-japanese-suzume-vector-v0.1 |       9 |       10 |      8 |           +1 |       0.03%
+NeverSleep/Llama-3-Lumimaid-70B-v0.1          |      10 |        6 |     16 |           -6 |       0.06%
+abhishek/autotrain-llama3-70b-orpo-v1         |      11 |       11 |      9 |           +2 |       0.10%
+abhishek/autotrain-llama3-70b-orpo-v2         |      12 |       11 |     10 |           +2 |       0.02%
+MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.1   |      13 |       13 |     13 |           +0 |       0.08%
+tenyx/Llama3-TenyxChat-70B                    |      14 |       14 |     11 |           +3 |       0.04%
+meta-llama/Meta-Llama-3-70B-Instruct          |      15 |       15 |     14 |           +1 |       0.05%
+failspy/llama-3-70B-Instruct-abliterated      |      16 |       17 |     14 |           +2 |       0.11%
+shenzhi-wang/Llama3-70B-Chinese-Chat          |      17 |       16 |     20 |           -3 |       0.19%
+migtissera/Tess-2.0-Llama-3-70B               |      18 |       18 |     31 |          -13 |       0.26%
+fblgit/una-xaberius-34b-v1beta                |      19 |       19 |     35 |          -16 |       0.16%
+migtissera/Tess-2.0-Llama-3-70B-v0.2          |      20 |       23 |     29 |           -9 |       0.07%
+jondurbin/airoboros-70b-3.3                   |      21 |       31 |     12 |           +9 |       0.04%
+SF-Foundation/Ein-70B-v2                      |      21 |       20 |     41 |          -20 | -
+kyujinpy/PlatYi-34B-Llama-Q                   |      23 |       28 |     18 |           +5 |       0.01%
+davidkim205/Rhea-72b-v0.4                     |      23 |       21 |     40 |          -17 | -
+davidkim205/Rhea-72b-v0.5                     |      25 |       22 |     43 |          -18 |       0.09%
+kyujinpy/PlatYi-34B-LoRA                      |      25 |       25 |     30 |           -5 | -
+davidkim205/Rhea-72b-v0.2                     |      27 |       23 |     37 |          -10 |       0.01%
+kyujinpy/PlatYi-34B-Llama-Q-FastChat          |      28 |       27 |     27 |           +1 |       0.04%
+dfurman/Llama-3-70B-Orpo-v0.1                 |      29 |       26 |     32 |           -3 |       0.04%
+meta-llama/Meta-Llama-3-70B                   |      30 |       29 |     33 |           -3 |       0.18%
+ValiantLabs/Llama3-70B-Fireplace              |      31 |       33 |     25 |           +6 |       0.04%
+kyujinpy/PlatYi-34B-Llama                     |      32 |       32 |     28 |           +4 |       0.03%
+Qwen/Qwen1.5-110B-Chat                        |      33 |       41 |     23 |          +10 |       0.04%
+ParasiticRogue/Merged-RP-Stew-V2-34B          |      34 |       30 |     54 |          -20 |       0.34%
+kyujinpy/PlatYi-34B-Q                         |      35 |       38 |     46 |          -11 |       0.03%
+microsoft/Phi-3-medium-4k-instruct            |      36 |       49 |     38 |           -2 |       0.13%
+cloudyu/Mixtral_34Bx2_MoE_60B                 |      37 |       33 |     74 |          -37 |       0.01%
+unsloth/Phi-3-medium-4k-instruct              |      37 |       50 |     38 |           -1 | -
+davidkim205/Rhea-72b-v0.3                     |      39 |       38 |     57 |          -18 |       0.04%
+cloudyu/Truthful_DPO_cloudyu_Mixtral_34Bx2_Mo |      39 |       33 |     79 |          -40 | -
+
+
+SUBJECT-LEVEL STRUCTURAL SENSITIVITY & EFFECT SIZE
+
+
+Global Pooled R-squared:  0.035727
+Subjects Analyzed:        57
+
+Subject                                | Domain   |     N |       R2 |
+----------------------------------------------------------------------
+high_school_computer_science           | STEM     |   100 |   0.2453 |
+college_chemistry                      | STEM     |   100 |   0.2331 |
+business_ethics                        | Non-STEM |   100 |   0.2000 |
+high_school_macroeconomics             | Non-STEM |   390 |   0.1940 |
+professional_accounting                | Non-STEM |   282 |   0.1937 |
+medical_genetics                       | Non-STEM |   100 |   0.1900 |
+abstract_algebra                       | STEM     |   100 |   0.1802 |
+college_physics                        | STEM     |   102 |   0.1718 |
+computer_security                      | STEM     |   100 |   0.1641 |
+electrical_engineering                 | STEM     |   145 |   0.1636 |
+formal_logic                           | Non-STEM |   126 |   0.1536 |
+college_computer_science               | STEM     |   100 |   0.1493 |
+management                             | Non-STEM |   103 |   0.1467 |
+public_relations                       | Non-STEM |   110 |   0.1456 |
+logical_fallacies                      | Non-STEM |   163 |   0.1317 |
+college_medicine                       | Non-STEM |   173 |   0.1182 |
+virology                               | Non-STEM |   166 |   0.1157 |
+machine_learning                       | STEM     |   112 |   0.1148 |
+conceptual_physics                     | STEM     |   235 |   0.1112 |
+international_law                      | Non-STEM |   121 |   0.1102 |
+college_mathematics                    | STEM     |   100 |   0.1091 |
+econometrics                           | Non-STEM |   114 |   0.0987 |
+us_foreign_policy                      | Non-STEM |   100 |   0.0986 |
+high_school_statistics                 | STEM     |   216 |   0.0856 |
+high_school_chemistry                  | STEM     |   203 |   0.0850 |
+high_school_geography                  | Non-STEM |   198 |   0.0832 |
+high_school_government_and_politics    | Non-STEM |   193 |   0.0756 |
+high_school_microeconomics             | Non-STEM |   238 |   0.0742 |
+clinical_knowledge                     | Non-STEM |   265 |   0.0736 |
+global_facts                           | Non-STEM |   100 |   0.0727 |
+jurisprudence                          | Non-STEM |   108 |   0.0719 |
+college_biology                        | STEM     |   144 |   0.0677 |
+astronomy                              | STEM     |   152 |   0.0671 |
+anatomy                                | STEM     |   135 |   0.0592 |
+high_school_mathematics                | STEM     |   270 |   0.0569 |
+high_school_european_history           | Non-STEM |   165 |   0.0567 |
+human_sexuality                        | Non-STEM |   131 |   0.0532 |
+security_studies                       | Non-STEM |   245 |   0.0520 |
+elementary_mathematics                 | STEM     |   378 |   0.0499 |
+miscellaneous                          | Non-STEM |   783 |   0.0496 |
+sociology                              | Non-STEM |   201 |   0.0472 |
+high_school_world_history              | Non-STEM |   237 |   0.0460 |
+prehistory                             | Non-STEM |   324 |   0.0432 |
+high_school_us_history                 | Non-STEM |   204 |   0.0386 |
+world_religions                        | Non-STEM |   171 |   0.0376 |
+moral_disputes                         | Non-STEM |   346 |   0.0303 |
+high_school_psychology                 | Non-STEM |   545 |   0.0282 |
+professional_medicine                  | Non-STEM |   272 |   0.0281 |
+high_school_physics                    | STEM     |   151 |   0.0270 |
+marketing                              | Non-STEM |   234 |   0.0247 |
+human_aging                            | Non-STEM |   223 |   0.0209 |
+professional_psychology                | Non-STEM |   612 |   0.0207 |
+philosophy                             | Non-STEM |   311 |   0.0174 |
+nutrition                              | Non-STEM |   306 |   0.0126 |
+moral_scenarios                        | Non-STEM |   895 |   0.0105 |
+high_school_biology                    | STEM     |   310 |   0.0086 |
+professional_law                       | Non-STEM |  1534 |   0.0042 |
+
+BETWEEN-DOMAIN EFFECT SIZE (COHEN'S q)
+
+Cohen's q = arctanh(r_1) - arctanh(r_2), where r = sqrt(R-squared).
+Conventions (Cohen, 1988): 0.10 small, 0.30 medium, 0.50 large.
+
+ Exemplar contrast: college_chemistry vs professional_law
+    R2: 0.2331 vs 0.0042  |  r: 0.4829 vs 0.0648
+    Cohen's q = 0.4618 (medium)
+
+ Observed extremes: high_school_computer_science vs professional_law
+    R2: 0.2453 vs 0.0042  |  r: 0.4952 vs 0.0648
+    Cohen's q = 0.4780 (medium)
+
+
+
+WSCG COGNITIVE WEIGHT SENSITIVITY ANALYSIS
+
+
+Parse cache: 14042 items | tiers perturbed: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
+Fidelity of re-derived baseline vs shipped WSCG: r(depth) = 0.999987, r(nodes) = 1.000000, max|delta depth| = 2.0000
+
+Scheme                         |  STEM R2 |  nSTEM R2 |   LRT chi2 |       LRT p |  Z(MDD) |
+------------------------------------------------------------------------------------------
+Baseline (published weights)   |   0.0792 |    0.0380 |     454.86 |    1.33e-90 |    4.05 |
+Uniform +1.0 (all tiers)       |   0.0788 |    0.0336 |     452.93 |    3.43e-90 |    3.64 |
+Uniform -1.0 (all tiers)       |   0.0770 |    0.0379 |     494.11 |    5.79e-99 |    4.47 |
+Tier 0.5 +1.0                  |   0.0787 |    0.0433 |     430.19 |    2.36e-85 |    4.23 |
+Tier 0.5 -1.0                  |   0.0823 |    0.0371 |     511.50 |   1.13e-102 |    3.90 |
+Tier 1.0 +1.0                  |   0.0787 |    0.0313 |     476.48 |    3.31e-95 |    3.22 |
+Tier 1.0 -1.0                  |   0.0770 |    0.0375 |     461.67 |    4.72e-92 |    4.24 |
+Tier 1.5 +1.0                  |   0.0784 |    0.0366 |     458.59 |    2.14e-91 |    3.97 |
+Tier 1.5 -1.0                  |   0.0794 |    0.0386 |     452.16 |    4.99e-90 |    4.09 |
+Tier 2.0 +1.0                  |   0.0792 |    0.0379 |     437.83 |    5.60e-87 |    3.90 |
+Tier 2.0 -1.0                  |   0.0793 |    0.0373 |     473.13 |    1.71e-94 |    4.11 |
+Tier 2.5 +1.0                  |   0.0797 |    0.0379 |     452.77 |    3.71e-90 |    4.01 |
+Tier 2.5 -1.0                  |   0.0788 |    0.0381 |     456.80 |    5.15e-91 |    4.08 |
+Tier 3.0 +1.0                  |   0.0790 |    0.0368 |     453.29 |    2.87e-90 |    3.94 |
+Tier 3.0 -1.0                  |   0.0793 |    0.0388 |     457.80 |    3.14e-91 |    4.10 |
+Tier 3.5 +1.0                  |   0.0790 |    0.0383 |     451.69 |    6.29e-90 |    4.08 |
+Tier 3.5 -1.0                  |   0.0793 |    0.0378 |     458.02 |    2.83e-91 |    4.03 |
+Tier 4.0 +1.0                  |   0.0793 |    0.0391 |     469.23 |    1.16e-93 |    4.19 |
+Tier 4.0 -1.0                  |   0.0790 |    0.0362 |     436.59 |    1.03e-86 |    3.80 |
+Tier 4.5 +1.0                  |   0.0791 |    0.0376 |     455.56 |    9.45e-91 |    4.02 |
+Tier 4.5 -1.0                  |   0.0794 |    0.0388 |     453.86 |    2.17e-90 |    4.10 |
+Tier 5.0 +1.0                  |   0.0792 |    0.0380 |     454.86 |    1.33e-90 |    4.05 |
+Tier 5.0 -1.0                  |   0.0792 |    0.0380 |     454.86 |    1.33e-90 |    4.05 |
+
+MONTE CARLO (100 draws, each tier ~ U(-1, +1))
+  STEM R2      min=    0.0780  median=    0.0797  max=    0.0831
+  non-STEM R2  min=    0.0341  median=    0.0378  max=    0.0426
+  LRT chi2     min=  393.8104  median=  461.8076  max=  525.2857
+  Z(MDD)       min=    3.4946  median=    4.0181  max=    4.5399
+  LRT p           max=1.260e-77
+
+PRIMARY CONCLUSIONS ACROSS ALL 123 SCHEMES
+  LRT rejects homogeneity at p < 0.001:      123/123
+  STEM R2 exceeds non-STEM R2:               123/123
+  Syntactic MDD Z positive and p < 0.01:     123/123
+
+================================================================================
+
+CROSS-VALIDATION AND BASELINE COMPARISON
+
+BASELINE MODEL COMPARISON (nested predictor sets)
+
+R2 is in-sample; CV R2 is the mean of 5-fold out-of-sample R2 (SD in parentheses).
+
+Predictor set                    |  k | Global R2 |        Global CV |  STEM R2 |          STEM CV | nSTEM R2 |         nSTEM CV |
+----------------------------------------------------------------------------------------------------------------------------------
+Word count only                  |  1 |    0.0071 |    0.0059 (0.0029) |   0.0156 |    0.0123 (0.0123) |   0.0139 |    0.0133 (0.0075) |
++ sentence count                 |  2 |    0.0082 |    0.0068 (0.0033) |   0.0158 |    0.0119 (0.0125) |   0.0152 |    0.0144 (0.0082) |
++ Flesch-Kincaid                 |  3 |    0.0101 |    0.0086 (0.0030) |   0.0338 |    0.0289 (0.0185) |   0.0152 |    0.0143 (0.0084) |
+Nine-indicator framework         |  9 |    0.0357 |    0.0331 (0.0080) |   0.0792 |    0.0732 (0.0214) |   0.0380 |    0.0361 (0.0097) |
+Framework + surface features     | 12 |    0.0415 |    0.0383 (0.0071) |   0.0922 |    0.0844 (0.0216) |   0.0389 |    0.0360 (0.0095) |
+
+Incremental F-test, nine indicators added to the readability baseline:
+  global  : F(9, 14029) = 51.148, p = 6.368e-92
+  stem    : F(9, 3140) = 22.467, p = 2.095e-37
+  nonstem : F(9, 10876) = 29.812, p = 6.319e-52
+
+DOMAIN-LEVEL CROSS-VALIDATED R2 (nine indicators)
+  global  : CV R2 = 0.0331 (SD 0.0080)
+  stem    : CV R2 = 0.0732 (SD 0.0214)
+  nonstem : CV R2 = 0.0361 (SD 0.0097)
+
+MODEL FIT AND EFFECT SIZE BY PARTITION
+Partition  |      N |       R2 |  Cohen f2 |
+---------------------------------------------
+Pooled     |  14042 |   0.0357 |    0.0371 |
+STEM       |   3153 |   0.0792 |    0.0860 |
+non-STEM   |  10889 |   0.0380 |    0.0395 |
+
+95% HC3 CONFIDENCE INTERVALS FOR PATH COEFFICIENTS
+Indicator                |              Pooled b [95% CI] |                STEM b [95% CI] |            non-STEM b [95% CI] |
+----------------------------------------------------------------------------------------------------------------------------
+WSCG_Depth               |      0.0696 [ 0.0571,  0.0821] |      0.0602 [ 0.0185,  0.1020] |      0.0620 [ 0.0489,  0.0751] |
+WSCG_Nodes               |     -0.0023 [-0.0045, -0.0001] |      0.0189 [ 0.0060,  0.0319] |     -0.0007 [-0.0030,  0.0016] |
+Syntactic_MDD            |      0.1654 [ 0.0927,  0.2382] |      0.3694 [ 0.2167,  0.5220] |      0.0146 [-0.0644,  0.0936] |
+Syntactic_Depth          |      0.0027 [-0.0261,  0.0315] |     -0.0584 [-0.1291,  0.0124] |      0.0130 [-0.0184,  0.0443] |
+Knowledge_Zipf_Rarity    |      0.0971 [ 0.0086,  0.1856] |      0.2523 [ 0.0707,  0.4340] |     -0.0521 [-0.1492,  0.0450] |
+Knowledge_NER_Density    |      0.0108 [ 0.0067,  0.0150] |      0.0356 [ 0.0268,  0.0444] |      0.0002 [-0.0042,  0.0047] |
+Semantic_Concreteness    |      0.4127 [ 0.2858,  0.5395] |     -0.1642 [-0.4258,  0.0975] |      0.5883 [ 0.4440,  0.7326] |
+AMR_Depth                |      0.0516 [ 0.0283,  0.0750] |      0.0523 [-0.0009,  0.1055] |      0.0608 [ 0.0351,  0.0865] |
+Adversarial_Score        |     -0.0232 [-0.0323, -0.0141] |     -0.0343 [-0.0723,  0.0036] |     -0.0177 [-0.0269, -0.0084] |
+
+PER-SUBJECT CROSS-VALIDATED R2
+Subjects with N >= 50 items: 57 of 57
+
+CV column is the mean of 20 repeats of 5-fold CV; the SD in parentheses is across all 100 folds.
+
+Subject                                | Domain   |     N | R2 (in-sample) |  R2 (adj.) |   R2 (repeated CV) |
+------------------------------------------------------------------------------------------------------------
+high_school_macroeconomics             | Non-STEM |   390 |         0.1940 |     0.1750 |     0.1301 (0.1068) |
+professional_accounting                | Non-STEM |   282 |         0.1937 |     0.1670 |     0.1146 (0.1027) |
+miscellaneous                          | Non-STEM |   783 |         0.0496 |     0.0385 |     0.0134 (0.0461) |
+conceptual_physics                     | STEM     |   235 |         0.1112 |     0.0757 |    -0.0134 (0.1255) |
+professional_law                       | Non-STEM |  1534 |         0.0042 |    -0.0017 |    -0.0143 (0.0105) |
+elementary_mathematics                 | STEM     |   378 |         0.0499 |     0.0267 |    -0.0171 (0.0583) |
+moral_scenarios                        | Non-STEM |   895 |         0.0105 |     0.0004 |    -0.0184 (0.0231) |
+professional_psychology                | Non-STEM |   612 |         0.0207 |     0.0060 |    -0.0229 (0.0331) |
+high_school_psychology                 | Non-STEM |   545 |         0.0282 |     0.0118 |    -0.0246 (0.0527) |
+high_school_statistics                 | STEM     |   216 |         0.0856 |     0.0456 |    -0.0299 (0.1116) |
+prehistory                             | Non-STEM |   324 |         0.0432 |     0.0157 |    -0.0357 (0.0727) |
+college_chemistry                      | STEM     |   100 |         0.2331 |     0.1565 |    -0.0374 (0.2228) |
+clinical_knowledge                     | Non-STEM |   265 |         0.0736 |     0.0409 |    -0.0425 (0.1153) |
+high_school_mathematics                | STEM     |   270 |         0.0569 |     0.0242 |    -0.0449 (0.0867) |
+virology                               | Non-STEM |   166 |         0.1157 |     0.0646 |    -0.0464 (0.1198) |
+high_school_chemistry                  | STEM     |   203 |         0.0850 |     0.0423 |    -0.0466 (0.0970) |
+formal_logic                           | Non-STEM |   126 |         0.1536 |     0.0879 |    -0.0504 (0.2204) |
+electrical_engineering                 | STEM     |   145 |         0.1636 |     0.1078 |    -0.0600 (0.3944) |
+moral_disputes                         | Non-STEM |   346 |         0.0303 |     0.0043 |    -0.0627 (0.0798) |
+security_studies                       | Non-STEM |   245 |         0.0520 |     0.0157 |    -0.0742 (0.1282) |
+philosophy                             | Non-STEM |   311 |         0.0174 |    -0.0119 |    -0.0751 (0.0596) |
+nutrition                              | Non-STEM |   306 |         0.0126 |    -0.0175 |    -0.0762 (0.0628) |
+professional_medicine                  | Non-STEM |   272 |         0.0281 |    -0.0053 |    -0.0792 (0.0917) |
+college_medicine                       | Non-STEM |   173 |         0.1182 |     0.0695 |    -0.0811 (0.2275) |
+high_school_microeconomics             | Non-STEM |   238 |         0.0742 |     0.0377 |    -0.0882 (0.1713) |
+human_aging                            | Non-STEM |   223 |         0.0209 |    -0.0205 |    -0.0985 (0.1027) |
+high_school_biology                    | STEM     |   310 |         0.0086 |    -0.0211 |    -0.0991 (0.0835) |
+marketing                              | Non-STEM |   234 |         0.0247 |    -0.0145 |    -0.1015 (0.1207) |
+college_physics                        | STEM     |   102 |         0.1718 |     0.0908 |    -0.1036 (0.1861) |
+high_school_computer_science           | STEM     |   100 |         0.2453 |     0.1698 |    -0.1107 (0.4038) |
+high_school_european_history           | Non-STEM |   165 |         0.0567 |     0.0019 |    -0.1114 (0.1395) |
+high_school_geography                  | Non-STEM |   198 |         0.0832 |     0.0393 |    -0.1213 (0.2521) |
+sociology                              | Non-STEM |   201 |         0.0472 |     0.0023 |    -0.1335 (0.1522) |
+public_relations                       | Non-STEM |   110 |         0.1456 |     0.0687 |    -0.1348 (0.3411) |
+high_school_world_history              | Non-STEM |   237 |         0.0460 |     0.0082 |    -0.1413 (0.2849) |
+high_school_physics                    | STEM     |   151 |         0.0270 |    -0.0352 |    -0.1504 (0.1096) |
+machine_learning                       | STEM     |   112 |         0.1148 |     0.0367 |    -0.1631 (0.2606) |
+medical_genetics                       | Non-STEM |   100 |         0.1900 |     0.1090 |    -0.1737 (0.3944) |
+anatomy                                | STEM     |   135 |         0.0592 |    -0.0085 |    -0.1746 (0.2375) |
+astronomy                              | STEM     |   152 |         0.0671 |     0.0080 |    -0.1791 (0.2972) |
+econometrics                           | Non-STEM |   114 |         0.0987 |     0.0207 |    -0.1887 (0.2441) |
+college_computer_science               | STEM     |   100 |         0.1493 |     0.0643 |    -0.2002 (0.3782) |
+logical_fallacies                      | Non-STEM |   163 |         0.1317 |     0.0807 |    -0.2064 (0.4766) |
+abstract_algebra                       | STEM     |   100 |         0.1802 |     0.0983 |    -0.2065 (1.4212) |
+college_mathematics                    | STEM     |   100 |         0.1091 |     0.0200 |    -0.2085 (0.2597) |
+high_school_us_history                 | Non-STEM |   204 |         0.0386 |    -0.0060 |    -0.2188 (0.4429) |
+high_school_government_and_politics    | Non-STEM |   193 |         0.0756 |     0.0301 |    -0.2346 (0.3498) |
+management                             | Non-STEM |   103 |         0.1467 |     0.0641 |    -0.2445 (0.4764) |
+college_biology                        | STEM     |   144 |         0.0677 |     0.0051 |    -0.2514 (0.3910) |
+human_sexuality                        | Non-STEM |   131 |         0.0532 |    -0.0172 |    -0.2645 (0.3388) |
+global_facts                           | Non-STEM |   100 |         0.0727 |    -0.0201 |    -0.3415 (0.3298) |
+computer_security                      | STEM     |   100 |         0.1641 |     0.0805 |    -0.3511 (0.8377) |
+international_law                      | Non-STEM |   121 |         0.1102 |     0.0380 |    -0.3521 (0.6918) |
+business_ethics                        | Non-STEM |   100 |         0.2000 |     0.1200 |    -0.3556 (0.8818) |
+world_religions                        | Non-STEM |   171 |         0.0376 |    -0.0162 |    -0.3867 (2.1958) |
+jurisprudence                          | Non-STEM |   108 |         0.0719 |    -0.0134 |    -0.5955 (1.6633) |
+us_foreign_policy                      | Non-STEM |   100 |         0.0986 |     0.0085 |    -0.7389 (1.9363) |
+
+Mean in-sample minus cross-validated R2 across reported subjects: 0.2324 (max 0.8375)
+Subjects with positive cross-validated R2: 3 of 57
+
+SUBJECT-LEVEL DOMAIN CONTRAST
+Treating each subject as one observation. Adjusted R2 is the defensible per-subject summary: it is a closed-form penalty for the 9:N ratio rather than a resampling estimate, so it does not inherit the fold-to-fold variance that makes the CV column uninterpretable subject by subject.
+  R2_insample : STEM mean   0.1131 (median   0.1091), non-STEM mean   0.0781 (median   0.0643); Welch t(55) = 1.953, p = 0.0597; Mann-Whitney U = 478.0, p = 0.0486; Cohen's d = 0.579
+  R2_adjusted : STEM mean   0.0520 (median   0.0423), non-STEM mean   0.0311 (median   0.0138); Welch t(55) = 1.372, p = 0.1794; Mann-Whitney U = 451.0, p = 0.1298; Cohen's d = 0.401
+  R2_cv       : STEM mean  -0.1288 (median  -0.1107), non-STEM mean  -0.1494 (median  -0.1000); Welch t(55) = 0.588, p = 0.5587; Mann-Whitney U = 362.0, p = 0.9932; Cohen's d = 0.137
+
+================================================================================
+
+ROBUST INVARIANCE TESTING
+
+CROSS-GROUP COEFFICIENT TESTS WITH MULTIPLICITY CONTROL
+Nine simultaneous Clogg et al. (1995) Z-tests; Holm-Bonferroni and Benjamini-Hochberg applied to the family.
+
+Indicator                |   delta b |       SE |       Z |    p (raw) |   p (Holm) |     p (BH) | Holm |
+---------------------------------------------------------------------------------------------------------
+WSCG_Depth               |   -0.0017 |   0.0223 |  -0.078 |  9.377e-01 |  1.000e+00 |  9.377e-01 |   no |
+WSCG_Nodes               |    0.0197 |   0.0067 |   2.926 |  3.431e-03 |  2.059e-02 |  6.782e-03 |  yes |
+Syntactic_MDD            |    0.3548 |   0.0877 |   4.046 |  5.209e-05 |  3.646e-04 |  1.563e-04 |  yes |
+Syntactic_Depth          |   -0.0713 |   0.0395 |  -1.808 |  7.068e-02 |  2.827e-01 |  1.060e-01 |   no |
+Knowledge_Zipf_Rarity    |    0.3044 |   0.1051 |   2.897 |  3.768e-03 |  2.059e-02 |  6.782e-03 |  yes |
+Knowledge_NER_Density    |    0.0354 |   0.0050 |   7.033 |  2.026e-12 |  1.824e-11 |  1.824e-11 |  yes |
+Semantic_Concreteness    |   -0.7525 |   0.1525 |  -4.936 |  7.977e-07 |  6.382e-06 |  3.590e-06 |  yes |
+AMR_Depth                |   -0.0084 |   0.0301 |  -0.280 |  7.794e-01 |  1.000e+00 |  8.768e-01 |   no |
+Adversarial_Score        |   -0.0167 |   0.0199 |  -0.836 |  4.029e-01 |  1.000e+00 |  5.180e-01 |   no |
+
+Surviving Holm at alpha = 0.05: WSCG_Nodes, Syntactic_MDD, Knowledge_Zipf_Rarity, Knowledge_NER_Density, Semantic_Concreteness
+Surviving Benjamini-Hochberg at q = 0.05: WSCG_Nodes, Syntactic_MDD, Knowledge_Zipf_Rarity, Knowledge_NER_Density, Semantic_Concreteness
+
+JOINT WALD TEST OF COEFFICIENT EQUALITY (HC3 THROUGHOUT)
+W = (b_STEM - b_nonSTEM)' [V_STEM + V_nonSTEM]^-1 (b_STEM - b_nonSTEM), with V the HC3 covariance of each partition. The partitions are disjoint, so the two covariance matrices add.
+  Slopes only:            W = 138.3586, df = 9, p = 2.251e-25
+  Slopes plus intercept:  W = 375.7612, df = 10, p = 1.346e-74
+
+NORMAL-THEORY LIKELIHOOD RATIO TEST (reference)
+  Lambda = 454.8637, df = 11, p = 1.328e-90
+  STEM R2 = 0.079216, non-STEM R2 = 0.037999, gap = 0.041216
+  Cohen's q (domain level) = 0.0918
+
+OLS RESIDUAL DIAGNOSTICS
+Partition  |    skew |  ex.kurt |  Jarque-Bera |       JB p | Breusch-Pagan |       BP p |    White p |
+-------------------------------------------------------------------------------------------------------
+Pooled     |  1.3660 |   1.0865 |      5057.71 |  0.000e+00 |        130.70 |  8.517e-24 |  9.305e-42 |
+STEM       |  0.8927 |   0.1013 |       420.16 |  5.799e-92 |         42.05 |  3.222e-06 |  1.880e-03 |
+non-STEM   |  1.5343 |   1.6991 |      5581.94 |  0.000e+00 |        120.84 |  8.991e-22 |  1.343e-27 |
+Residuals are right-skewed and leptokurtic relative to the normal, and Breusch-Pagan and White both reject homoskedasticity in every partition. The normal-theory likelihood the LRT rests on is therefore misspecified, which is exactly why the HC3 Wald test above, the bootstrap below and the permutation null are the load-bearing inference and the LRT is retained only for comparability with the multi-group SEM literature.
+
+NONPARAMETRIC BOOTSTRAP (1000 stratified item resamples)
+Quantity               |   observed |  boot mean |    boot SD |       2.5% |      97.5% |
+-----------------------------------------------------------------------------------------
+Lambda (LRT)           |   454.8637 |   467.3898 |    49.4014 |   374.9501 |   565.3490 |
+STEM R2                |     0.0792 |     0.0826 |     0.0100 |     0.0641 |     0.1033 |
+non-STEM R2            |     0.0380 |     0.0390 |     0.0036 |     0.0322 |     0.0464 |
+R2 gap                 |     0.0412 |     0.0436 |     0.0106 |     0.0223 |     0.0651 |
+Cohen's q              |     0.0918 |     0.0954 |     0.0212 |     0.0519 |     0.1358 |
+Bootstrap replicates with LRT p < 0.001: 100.000%
+Bootstrap replicates with STEM R2 > non-STEM R2: 100.000%
+
+LABEL-PERMUTATION TEST (10000 permutations of the STEM/non-STEM assignment)
+  Observed R2 gap:      0.041216
+  Permutation null gap: mean 0.002012, SD 0.007191, 95th pct of |gap| 0.014720, max |gap| 0.031492
+  Two-sided p (gap):    9.999e-05 (0 of 10000 permutations matched or exceeded the observed gap)
+  Observed Lambda:      454.8637
+  Permutation null Lambda: mean 12.0004, SD 5.6538, max 48.6265
+  One-sided p (Lambda): 9.999e-05
+
+SAMPLE SIZE AND POWER
+  STEM     : N =  3153, f2 = 0.0860, power at alpha = 0.05 is 1.0000; minimum detectable f2 at 80% power is 0.00499 (R2 = 0.00497)
+  non-STEM : N = 10889, f2 = 0.0395, power at alpha = 0.05 is 1.0000; minimum detectable f2 at 80% power is 0.00144 (R2 = 0.00144)
+  Pooled   : N = 14042, f2 = 0.0371, power at alpha = 0.05 is 1.0000; minimum detectable f2 at 80% power is 0.00112 (R2 = 0.00111)
+
+================================================================================
+
+IRT SPECIFICATION AND REPLICATION CHECKS
+
+1PL (RASCH) VERSUS 2PL DIFFICULTY
+  Items compared: 14042
+  Pearson  r(b_2PL, b_1PL) = 0.894233 (p = 0.000e+00)
+  Spearman rho             = 0.933008
+  b_1PL range: [-3.5044, 5.6189], mean -0.1113, SD 1.7923
+
+Domain analysis on 2PL difficulty (published):
+  N: STEM 3153, non-STEM 10889
+  STEM R2 = 0.079216, non-STEM R2 = 0.037999, gap = 0.041216
+  Wald (HC3, 9 df) = 138.3586, p = 2.251e-25
+  Lambda (11 df)   = 454.8637, p = 1.328e-90
+  Z(Syntactic MDD) = 4.0461   Z(Entity Density) = 7.0327
+
+Domain analysis on 1PL difficulty:
+  N: STEM 3153, non-STEM 10889
+  STEM R2 = 0.103791, non-STEM R2 = 0.067592, gap = 0.036199
+  Wald (HC3, 9 df) = 167.2074, p = 2.354e-31
+  Lambda (11 df)   = 554.7233, p = 6.688e-112
+  Z(Syntactic MDD) = 3.0103   Z(Entity Density) = 9.3331
+
+RANDOM SPLIT-HALF REPLICATION OF THE DOMAIN ANALYSIS
+Items are split at random into two disjoint halves; the whole domain-stratified analysis is re-run on each independently.
+
+Half A:
+  N: STEM 1545, non-STEM 5476
+  STEM R2 = 0.089277, non-STEM R2 = 0.039046, gap = 0.050231
+  Wald (HC3, 9 df) = 80.2487, p = 1.442e-13
+  Lambda (11 df)   = 228.1186, p = 1.048e-42
+  Z(Syntactic MDD) = 3.3736   Z(Entity Density) = 4.4472
+
+Half B:
+  N: STEM 1608, non-STEM 5413
+  STEM R2 = 0.072853, non-STEM R2 = 0.038877, gap = 0.033977
+  Wald (HC3, 9 df) = 63.9991, p = 2.258e-10
+  Lambda (11 df)   = 233.6357, p = 7.387e-44
+  Z(Syntactic MDD) = 2.4819   Z(Entity Density) = 5.5616
+
+Both halves show STEM R2 > non-STEM R2 and reject coefficient equality at p < 0.001: True
+
+20 independent random splits (40 half-samples):
+  STEM R2:     mean 0.0824, range [0.0601, 0.1150]
+  non-STEM R2: mean 0.0387, range [0.0297, 0.0487]
+  Half-samples with STEM R2 > non-STEM R2: 40/40
+  Half-samples rejecting coefficient equality at p < 0.001: 40/40
+  Z(Syntactic MDD) range: [1.436, 4.116]
+  Z(Entity Density) range: [2.814, 7.205]
+
+================================================================================
+
+MEASUREMENT ROBUSTNESS
+
+
+EXPLAINED VARIANCE IN ABSOLUTE UNITS
+
+R-squared is a ratio, so a partition with a wider spread of difficulty can
+post a higher R-squared at equal predictive accuracy. Reporting the
+explained variance itself, in logit-squared units, removes that scaling.
+
+Partition         N    SD(b)   Var(b)      RSE  Var expl.       R2
+------------------------------------------------------------------
+STEM           3153   2.3772   5.6509   2.2843     0.4327   0.0792
+non-STEM      10889   2.1740   4.7262   2.1332     0.1758   0.0380
+
+  STEM / non-STEM ratio, R-squared            2.08x   95% CI [1.52, 2.80]
+  STEM / non-STEM ratio, explained variance   2.46x   95% CI [1.80, 3.36]
+
+The contrast is not an artefact of the wider STEM difficulty distribution.
+Measured in logit-squared units the structural indicators account for
+0.4327 of STEM difficulty variance against 0.1758 outside it,
+a ratio of 2.46x, larger than the 2.08x implied by the R-squared comparison.
+
+
+DISCRIMINATION SCREENING
+
+Items whose discrimination is near zero are uninformative about ability,
+and their difficulty is weakly identified. If the domain contrast were
+driven by such items it would weaken when they are removed.
+
+Threshold       Dropped   % pool  STEM share  |b| dropped  |b| kept
+-------------------------------------------------------------------
+a_i < 0.1           212     1.5%       30.7%         1.21      1.75
+a_i < 0.2           674     4.8%       31.9%         2.36      1.71
+a_i < 0.5          3024    21.5%       32.0%         3.16      1.35
+
+  Pool-wide STEM share is 22.5%, so STEM is over-represented among low-discrimination items.
+
+Refits after screening:
+
+Threshold           N   STEM R2  nSTEM R2  Var expl. S  Var expl. nS     W(9)           p
+-----------------------------------------------------------------------------------------
+none            14042    0.0792    0.0380       0.4327        0.1758   138.36    2.25e-25
+a_i >= 0.1      13830    0.0832    0.0380       0.4612        0.1769   144.06    1.50e-26
+a_i >= 0.2      13368    0.0862    0.0382       0.4664        0.1706   149.58    1.08e-27
+a_i >= 0.5      11018    0.0619    0.0430       0.1661        0.0861    61.55    6.74e-10
+
+At the mild thresholds screening strengthens the contrast rather than
+weakening it: removing the 674 items with a_i < 0.2 raises STEM R-squared
+from 0.0792 to 0.0862 while non-STEM is unchanged, and the Wald statistic
+rises from 138.36 to 149.58. At a_i >= 0.5 the gap narrows (1.44x against
+2.08x) because that threshold discards 21.5% of the pool, including the
+hardest items in it (mean |b| 3.16 among those dropped), which truncates
+the difficulty range the indicators are being asked to predict. Slope
+equality is rejected at every threshold. The domain contrast is therefore
+not carried by items that fail to measure ability.
+
+================================================================================
+
+OPTION-SET INDICATORS
+
+The nine-indicator framework reads the question stem only. These eight
+indicators read the option set: how confusable the distractors are with
+the key, how homogeneous they are with each other, whether length or
+stem-overlap gives the key away, and how tightly numeric options cluster.
+
+Indicator                             mean        SD   r with b
+---------------------------------------------------------------
+Option_KeyDistractorSim             0.5145    0.2380     0.2300
+Option_MaxDistractorSim             0.6212    0.2436     0.2180
+Option_DistractorHomogeneity        0.5092    0.2340     0.2315
+Option_LengthDispersion             0.2267    0.1582    -0.0342
+Option_KeyLengthAdvantage           0.4093    4.4055    -0.0445
+Option_NumericProximity             0.7505    0.0453     0.0029
+Option_MetaOption                   0.0397    0.1952    -0.0267
+Option_StemKeyAdvantage             0.0112    0.1173    -0.0852
+
+
+INCREMENT OVER THE STEM-ONLY FRAMEWORK
+
+Cross-validated R-squared, 5 folds:
+
+Partition         N   stem-only  options-only   combined  F (increment)           p
+-----------------------------------------------------------------------------------
+Pooled        14042      0.0338        0.0684     0.0808        91.93 (8,14024)   1.60e-149
+STEM           3153      0.0751        0.0825     0.1196        21.85 (8,3135)    1.14e-32
+non-STEM      10889      0.0363        0.0559     0.0713        55.04 (8,10871)    2.95e-88
+
+
+COMBINED MODEL, POOLED (HC3)
+
+Term                                      b        SE        t           p
+--------------------------------------------------------------------------
+WSCG_Depth                           0.0162    0.0068     2.39    1.68e-02
+WSCG_Nodes                           0.0022    0.0011     1.95    5.14e-02
+Syntactic_MDD                        0.1090    0.0359     3.03    2.41e-03
+Syntactic_Depth                      0.0123    0.0143     0.87    3.87e-01
+Knowledge_Zipf_Rarity                0.1185    0.0440     2.70    7.03e-03
+Knowledge_NER_Density                0.0094    0.0020     4.61    4.07e-06
+Semantic_Concreteness                0.2157    0.0633     3.41    6.58e-04
+AMR_Depth                            0.0395    0.0117     3.39    7.00e-04
+Adversarial_Score                   -0.0117    0.0045    -2.61    9.09e-03
+Option_KeyDistractorSim              0.3558    0.3478     1.02    3.06e-01
+Option_MaxDistractorSim              1.0559    0.2398     4.40    1.07e-05
+Option_DistractorHomogeneity         0.9486    0.1916     4.95    7.38e-07
+Option_LengthDispersion              0.7864    0.1375     5.72    1.07e-08
+Option_KeyLengthAdvantage           -0.0205    0.0053    -3.84    1.25e-04
+Option_NumericProximity              0.0496    0.4743     0.10    9.17e-01
+Option_MetaOption                    0.1412    0.1045     1.35    1.77e-01
+Option_StemKeyAdvantage             -1.4770    0.1677    -8.81    1.29e-18
+
+
+INVARIANCE UNDER THE EXPANDED FEATURE SET
+
+Feature set                  k   STEM R2  nSTEM R2         W   df           p
+-----------------------------------------------------------------------------
+stem-only (published)        9    0.0792    0.0380    138.36    9    2.25e-25
+option-only                  8    0.0883    0.0584     51.97    8    1.71e-08
+combined                    17    0.1278    0.0755    138.86   17    3.64e-21
+
+Controlling for the option set does not dissolve the domain contrast: the
+joint Wald test against slope equality remains decisive, and STEM retains
+roughly twice the explained variance of non-STEM. The bifurcation is not
+an artefact of the stem-only restriction. Notably the option indicators
+are themselves non-invariant across the partition, so how much an item's
+difficulty is carried by its distractors, rather than by its stem, is also
+domain-dependent.
+
+
+READING
+
+Option-set structure alone cross-validates at 0.0684 pooled, against
+0.0338 for the nine stem indicators; together they reach 0.0808. The
+two sources of difficulty are largely complementary rather than redundant,
+which is what the construction of a multiple-choice item implies: the stem
+fixes what must be worked out and the option set fixes how finely the
+answer must be discriminated.
+
+This also diagnoses the HellaSwag transfer result in stage 40. There the
+stem-only framework explains essentially nothing within a source (0.0037,
+0.0035) because HellaSwag's difficulty was manufactured by adversarially
+filtering the endings. A stem-only instrument is blind to that by
+construction, and the correct reading of that null is a scope condition on
+the instrument rather than a failure of the finding it was built to test.
+
+================================================================================
+
+PREDICTABILITY CEILING
+
+Cross-validated R-squared under a common 5-fold split. The encoder is
+sentence-transformers/all-MiniLM-L6-v2 applied to the stem and options together, which is what
+the model was scored on. Ridge penalty selected within each training
+fold, so no test information enters the fit.
+
+Predictor set                     Pooled      STEM   non-STEM
+-------------------------------------------------------------
+Nine indicators                   0.0338    0.0751     0.0363
++ option indicators               0.0808    0.1196     0.0713
+Subject identity only             0.1354    0.1246     0.1197
+Indicators + subject              0.1414    0.1468     0.1229
+Embeddings (ceiling)              0.1269    0.1330     0.1113
+Embeddings + subject              0.1596    0.1584     0.1431
+Embeddings + all indicators       0.1394    0.1651     0.1190
+
+
+THE FRAMEWORK AS A FRACTION OF THE CEILING
+
+Two denominators are reported. The encoder ceiling is the best purely
+text-based predictor; the encoder-plus-subject ceiling adds topic
+membership, which is recoverable from the text in principle and is the
+more conservative comparison. Percentages against the smaller denominator
+should be read with the caveat that ridge over 384 dimensions is estimated
+on fewer items inside a partition than pooled, so the ceiling is itself
+less precisely determined in STEM than it is overall.
+
+
+Nine indicators:
+
+Partition       Framework   Ceiling   % ceil   +subject   % ceil+s
+------------------------------------------------------------------
+Pooled             0.0338    0.1269    26.6%     0.1596      21.2%
+STEM               0.0751    0.1330    56.5%     0.1584      47.4%
+non-STEM           0.0363    0.1113    32.6%     0.1431      25.4%
+
++ option indicators:
+
+Partition       Framework   Ceiling   % ceil   +subject   % ceil+s
+------------------------------------------------------------------
+Pooled             0.0808    0.1269    63.7%     0.1596      50.6%
+STEM               0.1196    0.1330    89.9%     0.1584      75.5%
+non-STEM           0.0713    0.1113    64.1%     0.1431      49.8%
+
+
+READING
+
+A dense encoder reading the whole item reaches 0.1269 pooled,
+0.1330 in STEM. Most difficulty is therefore not recoverable from
+the item text by any method: the ceiling is low in absolute terms, which
+is the honest context for the framework's own share and cannot be read off
+an R-squared against total variance.
+
+Subject identity alone reaches 0.1354 pooled. A large part of what
+an encoder knows about an MMLU item is which subject it came from, which
+is topic membership rather than structural complexity. The nine indicators
+are not a proxy for topic: they are computed from text structure and carry
+no subject label.
+
+The comparison worth reporting is the framework against the ceiling, not
+against 1.0. Against a ceiling estimated the same way on the same folds,
+the nine indicators recover 57% of text-predictable difficulty in STEM and
+33% outside it, while remaining interpretable and theory-grounded, which
+a 384-dimensional embedding is not.
+
+Adding the option indicators takes that to 90% of the encoder ceiling in STEM
+(75% against the conservative encoder-plus-subject ceiling). Seventeen
+interpretable features recover most of what a dense representation of
+the same item can extract. The residual gap is the part of difficulty
+that is neither structural nor topical, and on this evidence it is
+small relative to the part that is simply not in the text at all.
+
+================================================================================
+
+DIFFERENTIAL ITEM FUNCTIONING ACROSS MODEL FAMILIES
+
+Measurement invariance in Meredith's sense concerns groups of
+respondents. Here the respondents are language models and the groups are
+architecture families. Mantel-Haenszel conditions on estimated ability, so
+a family that is uniformly weaker does not register as DIF; only an item
+that is differentially hard for equally able models does.
+
+Reference family: llama (n = 319)
+Ability strata: 10 quantiles of the joint theta distribution
+
+Family sizes:
+  llama         319
+  other         284
+  mixtral       135
+  solar          93
+  yi             49
+  gemma          38
+  falcon         31
+  deepseek       24
+  phi            18
+  qwen            8
+  mistral         1
+
+
+DIF PREVALENCE BY FAMILY
+
+Items are classified on the ETS scale; B and C additionally require
+a significant MH chi-square at alpha = 0.05.
+
+Focal family      n  strata       A      B      C    B+C %  mean|d|
+-------------------------------------------------------------------
+mixtral         135      10    8011    878   5153    42.9%    1.720
+solar            93      10    7735    588   5719    44.9%    2.117
+yi               49       7    9795    167   4080    30.2%    1.878
+gemma            38       3    8454      9   5579    39.8%    2.375 *
+falcon           31       5   12546     71   1425    10.7%    1.498 *
+
+* gemma, falcon: fewer than 6 usable ability
+  strata, because the family's ability range barely overlaps the
+  reference. Conditioning is weak there and these rows should be
+  read as indicative only.
+
+
+PURIFIED SECOND PASS
+
+Matching on proportion correct over the 4714 items classified A for
+every well-conditioned focal family, rather than on the full-pool theta.
+
+Focal family    strata    B+C %   STEM %   non-STEM %    diff       z          p
+--------------------------------------------------------------------------------
+mixtral             10    44.4%    49.2%        43.1%    6.2%    6.13   8.73e-10
+solar               10    44.0%    50.0%        42.3%    7.7%    7.70   1.35e-14
+yi                   9    30.4%    35.6%        28.9%    6.7%    7.22   5.23e-13
+
+
+IS DIF CONCENTRATED IN ONE DOMAIN?
+
+Proportion of items flagged B or C, by partition, with a two-
+proportion z-test on the difference.
+
+Focal family     STEM %   non-STEM %     diff       z          p
+----------------------------------------------------------------
+mixtral           48.8%        41.3%     7.5%    7.51   5.96e-14
+solar             50.7%        43.2%     7.5%    7.47   7.79e-14
+yi                35.8%        28.6%     7.2%    7.77   8.12e-15
+gemma             37.8%        40.4%    -2.6%   -2.59   9.54e-03
+falcon            10.7%        10.6%     0.1%    0.14   8.91e-01
+
+
+SIGNED DIF BY DOMAIN (positive = item favours the focal family)
+
+Focal family    STEM mean d  nSTEM mean d       t          p
+------------------------------------------------------------
+mixtral               0.232         0.493   -6.04   1.69e-09
+solar                 0.140         0.254   -2.00   4.57e-02
+yi                   -0.158         0.374  -10.86   3.64e-27
+gemma                 0.460         0.403    0.99   3.20e-01
+falcon                0.165         0.410   -6.66   2.95e-11
+
+
+READING
+
+This is the invariance test the psychometric literature the paper cites is
+actually about, and it is a different question from the one the rest of the
+paper asks. Item-level DIF here means that two models of equal estimated
+ability but different architecture lineage have systematically different
+odds of answering particular items correctly. Where that is widespread, a
+single ability estimate is not comparable across families, and leaderboard
+positions that mix families are comparing scores that the measurement model
+does not licence comparing.
+
+Two qualifications. Mantel-Haenszel matches on a single ability estimate,
+so if the latent space is genuinely multidimensional -- which is what the
+rest of this paper argues -- some of what is flagged here is that
+multidimensionality reappearing as DIF rather than an independent defect.
+The two findings are symptoms of one cause, and should be reported as
+such rather than as separate evidence. Second, family labels are read off
+model names, and a large part of the population consists of merges and
+fine-tunes whose lineage is mixed; the reference and focal groups are
+therefore noisier than examinee groups in an educational setting.
+
+================================================================================
+
+EXPLANATORY IRT AND CONFIRMATORY MIRT
+
+MODEL A: EXPLANATORY IRT (LLTM WITH ERROR) -- NOT USABLE AS SPECIFIED
+
+Difficulty is modelled as g0 + g_stem*STEM + X*beta + (X*STEM)*delta
+plus a subject random effect and a residual item term, fitted jointly
+with ability and discrimination over all 14,042,000 responses.
+Indicators are standardised, so beta and delta are in logits per SD.
+
+Final ELBO loss: 5286277.0
+
+The estimates below are reported for completeness and should NOT be used.
+Two independent diagnostics say this fit has not converged, and the
+convergence check that follows the table is the reason.
+
+Indicator                    beta             95% CrI    delta             95% CrI  excl. 0
+-------------------------------------------------------------------------------------------
+WSCG Depth                 0.8773    [+0.863, +0.891]  -0.0354    [-0.048, -0.023]      yes
+WSCG Nodes                -0.3018    [-0.315, -0.289]  -0.5901    [-0.610, -0.574]      yes
+Syntactic MDD              0.0226    [+0.011, +0.034]   0.1744    [+0.164, +0.185]      yes
+Syntactic Depth           -0.5896    [-0.602, -0.576]   0.9074    [+0.896, +0.917]      yes
+Zipf Rarity               -0.0032    [-0.008, +0.002]  -0.1630    [-0.178, -0.148]      yes
+Entity Density             0.1414    [+0.136, +0.148]   0.2416    [+0.234, +0.250]      yes
+Lexical Concreteness       0.5552    [+0.547, +0.562]  -0.1892    [-0.202, -0.177]      yes
+AMR Depth                  0.7507    [+0.741, +0.760]  -0.3206    [-0.331, -0.311]      yes
+Adversarial Negation       0.3192    [+0.309, +0.330]  -0.6194    [-0.629, -0.610]      yes
+
+  Domain interactions whose 95% credible interval excludes zero: 9 of 9
+  Subject random-effect SD (sigma_u): 1.9385
+  Residual item SD (sigma_e):         4.9313
+  STEM intercept shift (g_stem):      +1.4444
+
+WHY THIS IS NOT REPORTED IN THE PAPER
+
+First, sigma_e = 4.93 logits exceeds the standard deviation of the
+difficulty distribution the two-stage calibration estimates (2.24). A
+residual item term larger than the quantity it is a residual of is not a
+plausible parameter value. Second, the credible intervals above are
+roughly an order of magnitude narrower than the HC3 standard errors on
+the same contrasts from the two-stage fit, which is the signature of a
+mean-field variational posterior collapsing rather than of a sharper
+estimate. Third, several interaction signs disagree with the two-stage
+OLS, and the convergence check below shows those signs are not stable.
+
+Same model on a 250-model subsample at increasing step counts.
+A converged fit is stable across them.
+
+   steps   sigma_e   sigma_u      d_MDD    d_Nodes  d_Density    d_Depth
+------------------------------------------------------------------------
+    3000     2.600     2.105     -0.007     -0.452      0.091      0.767
+    8000     5.211     2.051      0.337     -0.153      0.535      0.471
+   20000     5.383     1.835      0.380      1.144      0.454     -0.022
+
+The parameters move with the step budget and two interaction
+coefficients change sign, so the optimisation has not found a stable
+solution. The model is weakly identified as written: a free per-item
+residual over 14,042 items can absorb whatever the indicators would
+otherwise explain, leaving beta and delta poorly constrained, and a
+mean-field guide handles that badly.
+
+We therefore report the two-stage analysis as the paper's inference and
+leave the joint explanatory model as future work. Making it usable needs
+a tighter identification strategy -- a strict LLTM without the free item
+residual, or an informative prior on its scale -- together with an
+inference method whose posterior spread can be trusted. Reporting the
+unstable fit because 9 of 9 intervals happen to exclude zero would be
+reporting an artefact of the optimiser.
+
+
+MODEL B: CONFIRMATORY TWO-DIMENSIONAL IRT
+
+Each model receives a STEM ability and a non-STEM ability; each item
+loads on the dimension its subject assigns. The structure is fixed
+before estimation, so it is a hypothesis the data can reject.
+
+  Unidimensional final ELBO loss: 5336473.5
+  Two-dimensional final ELBO loss: 5331717.5
+  Improvement: 4756.0
+
+  Latent correlation rho(theta_STEM, theta_non-STEM) = 0.9651
+  95% credible interval [0.9642, 0.9659]
+  Posterior mass at rho > 0.99: 0.0%
+
+A latent correlation below unity means the two partitions do not measure
+one interchangeable ability, which is the claim the aggregate presupposes.
+A correlation this high also means they are far from independent: the
+aggregate is close to one construct, and the practical consequences come
+from rank compression among closely spaced models rather than from two
+abilities that diverge widely.
+
+================================================================================
+
+SUBSCALE CORRELATION: MATCHED-LENGTH DISATTENUATED ESTIMATE
+
+Models: 1000   Items: 14042
+STEM items: 3153   non-STEM items: 10889
+Matched half length: 1576 items per side
+Replicates: 200   seed: 1729
+
+Scores are proportion correct. Reliabilities are Spearman-Brown
+stepped up from the within-partition half correlation; the
+cross term is disattenuated with the half-length reliabilities
+that actually apply to it.
+
+--- random item splits ---
+  replicates                     : 200
+  matched length per side        : 1576 items (min 1576, max 1576)
+  raw cross-correlation (half len): 0.9729
+  STEM reliability (full len, SB) : 0.9972
+  non-STEM reliability (full len) : 0.9985
+  disattenuated correlation       : 0.9771
+  percentile interval             : [0.9744, 0.9797]
+  replicates reaching 1.0         : 0 of 200
+
+--- subject-disjoint splits ---
+  replicates                     : 200
+  matched length per side        : 1527 items (min 1403, max 1576)
+  raw cross-correlation (half len): 0.9669
+  STEM reliability (full len, SB) : 0.9904
+  non-STEM reliability (full len) : 0.9937
+  disattenuated correlation       : 0.9824
+  percentile interval             : [0.9769, 0.9893]
+  replicates reaching 1.0         : 0 of 200
+
+Both designs are reported because the subject-disjoint one is
+the conservative reading: removing shared subject membership
+lowers the within-partition reliabilities in the denominator,
+which pushes the disattenuated estimate up. An estimate that
+stays below 1.0 under the design that inflates it most is the
+one worth quoting against the MIRT figure.
+
+================================================================================
+
+SUBJECT-CLUSTERED INFERENCE FOR THE INVARIANCE TEST
+
+Items: 14042   Subjects: 57   STEM subjects: 19
+STEM items: 3153   non-STEM items: 10889
+
+JOINT WALD TEST OF SLOPE EQUALITY
+
+Covariance          W(9)            p     median SE inflation
+--------------------------------------------------------------------
+HC3 (published)    138.36   2.251e-25                    ---
+CR1 by subject      32.22   1.823e-04                   1.50x
+
+Per-indicator contrasts under both covariances:
+
+Indicator                    b(S)-b(nS)   SE HC3   SE CR1    z HC3   z CR1   Holm HC3   Holm CR1
+------------------------------------------------------------------------------------------------
+WSCG_Depth                    -0.0017   0.0223   0.0299    -0.08   -0.06   1.00e+00   1.00e+00 
+WSCG_Nodes                     0.0197   0.0067   0.0102     2.93    1.93   2.06e-02*  3.23e-01 
+Syntactic_MDD                  0.3548   0.0877   0.1213     4.05    2.93   3.65e-04*  2.75e-02*
+Syntactic_Depth               -0.0713   0.0395   0.0523    -1.81   -1.36   2.83e-01   6.91e-01 
+Knowledge_Zipf_Rarity          0.3044   0.1051   0.1579     2.90    1.93   2.06e-02*  3.23e-01 
+Knowledge_NER_Density          0.0354   0.0050   0.0093     7.03    3.81   1.82e-11*  1.26e-03*
+Semantic_Concreteness         -0.7525   0.1525   0.3372    -4.94   -2.23   6.38e-06*  1.80e-01 
+AMR_Depth                     -0.0084   0.0301   0.0517    -0.28   -0.16   1.00e+00   1.00e+00 
+Adversarial_Score             -0.0167   0.0199   0.0192    -0.84   -0.87   1.00e+00   1.00e+00 
+
+Surviving Holm at 0.05: 5 of 9 under HC3, 2 of 9 under CR1.
+  survive clustering : Syntactic_MDD, Knowledge_NER_Density
+  lost to clustering : WSCG_Nodes, Knowledge_Zipf_Rarity, Semantic_Concreteness
+
+PERMUTATION NULLS (10000 draws each)
+
+Observed in-sample R2 gap (STEM - non-STEM): 0.041216
+  STEM R2 0.079216   non-STEM R2 0.037999
+Observed LRT statistic: 454.8637
+
+Null over the R-squared gap:
+
+Null design        mean       SD    95th |gap|   max |gap|        p    exceed
+----------------------------------------------------------------------------------
+item-level       0.00201  0.00719     0.01472     0.03149    0.0001       0
+subject-block    0.00762  0.02281     0.04778     0.10559    0.0804     803
+
+Null over the LRT statistic:
+
+Null design        mean       SD          max        p    exceed
+--------------------------------------------------------------------
+item-level         12.00     5.65        48.63   0.0001       0
+subject-block     216.54   124.56      1096.05   0.0488     487
+
+Subject-block draws hold the STEM group at 19 subjects; item counts
+therefore vary (mean 4680, range 2631-7677) against the observed 3153.
+
+READING
+
+The two nulls answer different questions and give different
+answers.
+
+Slope non-invariance survives. The LRT statistic is beyond
+the subject-block null at p = 0.0488, and the
+clustered Wald test rejects equality at W(9) = 32.22,
+p = 1.82e-04. Clustering inflates the slope standard
+errors by about 1.50x and the statistic falls from
+138.36 to 32.22, but the conclusion does not
+depend on treating items as independent.
+
+The R-squared gap does not survive. Against the item-level
+null the gap is extreme (p = 0.0001); against the
+subject-block null it is ordinary (p = 0.0804).
+The block null is 3.2x wider, because a random
+union of whole subjects inherits the between-subject
+variation in how predictable difficulty is, and the
+item-level null destroys exactly that variation. A gap of
+0.0412 is what any 19-subject grouping of
+MMLU tends to produce. It is therefore not evidence that
+the STEM / non-STEM boundary specifically marks a change in
+how well structural complexity predicts difficulty.
+
+What the gap does remain is a description of these two
+partitions, which is what a practitioner reading the
+leaderboard actually faces. It is not a rejected null.
+
+================================================================================
+
+SIZE-MATCHED CONTROL FOR TOP-K DISPLACEMENT
+
+Models: 1000   Items: 14042
+STEM items: 3153 in 19 subjects   non-STEM items: 10889
+Null draws: 10000
+
+OBSERVED
+
+Partition        K    overlap   displacement
+------------------------------------------------
+STEM            10     8/10         20.0%
+STEM            50    39/50         22.0%
+non-STEM        10    10/10          0.0%
+non-STEM        50    46/50          8.0%
+
+NULL DISTRIBUTION OF DISPLACEMENT, K = 10
+  observed STEM displacement: 20.0%
+
+  Null design               mean       SD      95th      max         p  exceed
+  --------------------------------------------------------------------------
+  random items             13.51     9.58     30.00    60.00    0.4311    4310
+  subject blocks           22.99    12.60     40.00    60.00    0.7564    7564
+
+NULL DISTRIBUTION OF DISPLACEMENT, K = 50
+  observed STEM displacement: 22.0%
+
+  Null design               mean       SD      95th      max         p  exceed
+  --------------------------------------------------------------------------
+  random items             14.36     4.60     22.00    34.00    0.0861     860
+  subject blocks           22.43     5.20     32.00    40.00    0.6093    6093
+
+Random-item draws hold size at 3153 items. Subject-block
+draws hold subject count at 19, so item counts vary
+(mean 4680, range 2631-7677).
+
+READING
+
+The Top-50 displacement rate of 22% is not distinguishable
+from what a random subset of the same size produces (p = 0.086),
+nor from a random union of 19 subjects (p = 0.609). Scoring
+1,000 models on a quarter of the benchmark reshuffles the
+Top 50 by about this much whatever the items are about.
+
+The displacement is therefore real as a cost -- a
+practitioner selecting on the aggregate does miss roughly
+this fraction -- but it is a cost of estimating rank from a
+smaller item sample, not evidence that STEM ranks models
+differently. The rank-based claim cannot carry the
+construct argument on its own; the accuracy-level
+asymmetry and the subscale correlation are the load-bearing
+evidence there.
+
+================================================================================
+
+WSCG CONSTRUCT AUDIT
+
+Items: 14042   parse-cache entries: 14042
+
+PART 1: DOES PREPROCESSING REMOVE MATHEMATICAL NOTATION?
+
+Item counts matching each pattern at three stages of the pipeline.
+If the cleaned stem carries fewer matches than the raw release, the
+alignment step is destroying notation and the indicator undercounts.
+
+pattern                                   raw  aligned     stem
+---------------------------------------------------------------
+literal backslash                          80       80       80
+top tier: int/partial/nabla/oint            0        0        0
+other LaTeX command                        74       74       74
+\frac                                      22       22       22
+dollar sign                               738      738      736
+caret exponent                            169      169      169
+brace subscript                            10       10       10
+ASCII relational = < >                    356      356      354
+any digit                                4781     4781     4769
+
+LaTeX commands survive preprocessing: 74 items in the
+raw release, 74 in the cleaned stem. The stem split removes only
+answer options, so notation inside the question is retained.
+
+Top-tier triggers (\int, \partial, \nabla, \oint, \iint, \iiint)
+match 0 items in the raw release. The 5.0 tier is
+therefore inert because MMLU contains no integral or differential-
+operator notation, not because the pipeline discarded it.
+
+
+PART 2: WHICH TIER DOES EACH TOKEN LAND IN?
+
+Tokens in the parsed corpus: 747736
+
+  weight      tokens   % tokens     items   % items
+---------------------------------------------------
+     4.5        2649      0.35%      1705     12.1%
+     4.0        9182      1.23%      4731     33.7%
+     3.5        2209      0.30%      1737     12.4%
+     3.0       12334      1.65%      5449     38.8%
+     2.5         825      0.11%       621      4.4%
+     2.0       17507      2.34%      6156     43.8%
+     1.5       22051      2.95%     11497     81.9%
+     1.0       45787      6.12%      8868     63.2%
+     0.5      178371     23.85%     13973     99.5%
+     0.0      456821     61.09%     14009     99.8%
+
+By the rule that assigned the weight:
+
+        rule      tokens   % tokens     items   % items
+-------------------------------------------------------
+     lexicon       80075     10.71%     12755     90.8%
+        noun      178371     23.85%     13973     99.5%
+     numeral       19065      2.55%      5634     40.1%
+    symbolic       13312      1.78%      5555     39.6%
+       latex          92      0.01%        51      0.4%
+  background      456821     61.09%     14009     99.8%
+
+LaTeX triggers that do fire, with token counts:
+  \cdot                25   weight 2.0
+  \frac                19   weight 2.0
+  \sqrt                14   weight 3.0
+  \in                  11   weight 3.0
+  \times                4   weight 2.5
+  \mu                   3   weight 2.0
+  \binom                3   weight 3.5
+  \log                  3   weight 3.0
+  \sigma                3   weight 2.0
+  \lambda               2   weight 2.0
+  \alpha                1   weight 2.0
+  \nu                   1   weight 2.0
+  \pm                   1   weight 2.0
+  \pi                   1   weight 2.0
+  \gamma                1   weight 2.0
+
+
+PART 3: IS THE WSCG A NOUN COUNTER?
+
+Pearson correlations of the two Dimension 1 indicators with the
+surface quantities they are most often suspected of proxying.
+
+                                    WSCG Depth                WSCG Nodes
+                         all     STEM   n-STEM     all     STEM   n-STEM
+------------------------------------------------------------------------
+Token count            0.580    0.582    0.594   0.985    0.962    0.987
+Noun count             0.545    0.560    0.552   0.987    0.953    0.988
+Flesch--Kincaid        0.111    0.001    0.122   0.161    0.077    0.150
+IRT difficulty         0.158    0.195    0.164   0.100    0.199    0.120
+
+WSCG Nodes is close to a token count (0.985), which is
+expected: it counts the tokens that carry any weight at all.
+WSCG Depth is not (0.580); the longest weighted path
+through a dependency graph grows with nesting rather than length.
+
+
+PART 4: THE INDICATORS RESIDUALISED ON LENGTH
+
+Both Dimension 1 indicators are replaced by their OLS residual on
+token count, and then on noun count, exactly as Dimension 5 treats
+raw negation scope. Everything else in the model is unchanged.
+
+Specification                        STEM R2  nSTEM R2      W(9)           p
+----------------------------------------------------------------------------
+published                             0.0792    0.0380    138.36    2.25e-25
+D1 residualised on tokens             0.0798    0.0363    134.79    1.23e-24
+D1 residualised on nouns              0.0780    0.0397    153.25    1.87e-28
+
+
+PART 5: REMOVING THE NOUN TIER ENTIRELY
+
+The sensitivity grid of stage 15 already contains the decisive
+scheme. Tier 0.5 -1.0 clamps nouns and proper nouns to zero, so
+the graph is built from operational vocabulary alone.
+
+Scheme                           STEM R2  nSTEM R2    Z(MDD)
+------------------------------------------------------------
+baseline                          0.0792    0.0380      4.05
+nouns removed                     0.0823    0.0371      3.90
+
+STEM fit moves by +0.0031 when the noun tier is removed. The
+indicator is not carried by the nouns it spends most of its
+tokens on.
+
+
+READING
+
+The symbolic tier is inert because MMLU is written in ASCII, not
+because the pipeline strips notation: the cleaned stem carries
+every one of the 74 LaTeX commands present in the raw
+release, and no item in the benchmark contains an integral,
+partial derivative or nabla. Mathematical content reaches the graph
+through the ASCII symbolic class and the numeral tier instead. The
+consequence for the paper is a scope condition, not a bug: on a
+corpus that did carry LaTeX the top tier would fire, and on this
+one Dimension 1 reads mathematics only as far as ASCII notation
+and operational vocabulary carry it.
+
+On the noun objection the evidence runs the other way from the
+suspicion. Nouns dominate the token census, but removing them
+raises STEM fit rather than lowering it, WSCG Depth correlates
+only 0.58 with token count, and residualising both
+indicators on length leaves the domain contrast intact.
+
+================================================================================
+
+A GENERATIVE NULL FOR THE REASONING-STABILITY INVERSION
+
+Models: 1000   STEM items: 3153
+Guessing floor fixed at c = 0.25
+
+OBSERVED
+
+Marginal per-model logistic slope of accuracy on WSCG Depth,
+correlated with 2PL ability, at the trim levels the paper reports.
+
+Trim                             N   min theta        r           p
+-------------------------------------------------------------------
+full sample                   1000      -2.021   -0.772   1.26e-198
+bottom quartile removed        750      -0.651   -0.512    2.29e-51
+bottom half removed            500      -0.072   -0.397    2.79e-20
+
+
+THE NULL MODEL
+
+A 3PL with c fixed at the guessing rate is fitted to the same STEM
+submatrix. Its parameters carry the ability spread, the difficulty
+spread and the discrimination spread of the real data, and nothing
+else: the generating process contains no term in which complexity
+interacts with ability.
+
+  final ELBO loss                : 1380329.9
+  theta_hat vs published theta   : r = 0.9069
+  b_hat vs published difficulty  : r = 0.8916
+  fitted b range                 : [-4.85, 5.06]
+
+
+OBSERVED AGAINST THE NULL
+
+20 simulated matrices, each pushed through the identical
+per-model logistic procedure. The null column is what the guessing
+floor alone produces.
+
+Trim                          observed r  null mean   null SD          null range  residual
+-------------------------------------------------------------------------------------------
+full sample                       -0.772     -0.899     0.004    [-0.906, -0.891]     0.127
+bottom quartile removed           -0.512     -0.355     0.037    [-0.414, -0.288]    -0.157
+bottom half removed               -0.397     -0.119     0.045    [-0.195, -0.054]    -0.278
+
+  full sample                  null accounts for 116.4% of the observed correlation
+  bottom quartile removed      null accounts for  69.4% of the observed correlation
+  bottom half removed          null accounts for  30.0% of the observed correlation
+
+
+THE SLOPE ADJUSTED FOR EVERYTHING ELSE
+
+The published slope is marginal, and WSCG Depth is correlated with
+length, noun count and item difficulty, so part of what it measures
+is sensitivity to those. Two adjustments are reported, and they
+answer different questions. Adjusting for the other eight indicators
+isolates the depth effect from the text features that travel with
+it. Additionally adjusting for the item's own IRT difficulty asks
+whether depth matters beyond how hard the item turned out to be,
+which conditions on a consequence of depth and should be read as a
+bound rather than as the estimate.
+
+Trim                          marginal  + 8 indicators  + difficulty
+--------------------------------------------------------------------
+full sample                     -0.772          -0.179         0.152
+bottom quartile removed         -0.512           0.475         0.422
+bottom half removed             -0.397           0.580         0.497
+
+Against the same simulated null:
+
+Trim                           +8 obs  +8 null   resid   +b obs  +b null   resid
+--------------------------------------------------------------------------------
+full sample                    -0.179   -0.438   0.259    0.152   -0.172   0.324
+bottom quartile removed         0.475    0.359   0.116    0.422    0.329   0.093
+bottom half removed             0.580    0.453   0.128    0.497    0.387   0.109
+
+
+THE INTERACTION ESTIMATED INSIDE THE RESPONSE MODEL
+
+logit P(Y_ji = 1) = a_i (theta_j - b_i) + (g0 + g1 theta_j) W_i,
+with the lower asymptote fixed at the guessing rate and WSCG Depth
+standardised. This estimates the interaction in one fit, respects
+the floor natively, and does not read theta and the slope off
+overlapping data.
+
+  gamma0 (complexity effect at mean ability) : -0.3001  [-0.3263, -0.2715]
+  gamma1 (ability x complexity)              : -0.0859  [-0.0926, -0.0794]
+  95% credible interval excludes zero        : yes
+  final ELBO loss                            : 1380071.1
+
+Mean-field variational intervals understate posterior spread, so
+the interval above is a lower bound on uncertainty and the sign
+and magnitude of gamma1 are what should be read from it.
+
+
+READING
+
+The floor correction the paper applies is not sufficient on its
+own terms. Trimming removes models whose slopes are flat by
+constraint; it does not remove the compression that operates
+continuously above the trim point, and the simulated null
+reproduces a substantial share of the published correlation at
+every trim level.
+
+A residual of r = -0.278 survives at the trim the paper
+reports, so the effect is not wholly mechanical, but the
+published figure is not the size of the effect and should not
+be quoted as though it were.
+
+The model-based estimate is the one to quote, because it does not
+depend on the two-stage geometry at all. It is reported above with
+its sign and interval, and Section 5.1 has been rewritten around
+it rather than around the marginal correlation.
+
+================================================================================
+
+MODEL POPULATION STRUCTURE
+
+Models: 1000   Items: 14042
+
+REDUNDANCY IN THE POPULATION
+
+Two clusterings. The coarse key is base family and parameter
+bucket, which groups every fine-tune and merge of one base model
+together. The fine key is the checkpoint name with organisation,
+version and quantisation suffixes stripped, which separates
+different fine-tunes but collapses re-uploads of one artefact.
+
+  distinct coarse clusters :    50
+  distinct fine clusters   :   869
+  models per coarse cluster:  20.0
+
+Largest coarse clusters:
+  llama:4-9B                  169
+  unclassified:40-80B         104
+  unclassified:16-40B         102
+  llama:40-80B                 87
+  mixtral:unknown              60
+  llama:16-40B                 56
+  mixtral:40-80B               50
+  solar:9-16B                  50
+  yi:16-40B                    44
+  gemma:1-4B                   38
+
+Inside the aggregate Top 50:
+  distinct coarse clusters :     9 of 50 models
+  distinct fine clusters   :    40
+  checkpoints appearing more than once after normalisation:
+    llama-3-70b-instruct-dpo                      4
+    rhea-72b                                      4
+    llama-3-lumimaid-70b                          2
+    autotrain-llama3-70b-orpo                     2
+    phi-3-medium-4k-instruct                      2
+    tess-2-0-llama-3-70b                          2
+
+
+AN EMPIRICAL EVALUATION-NOISE FLOOR
+
+Some checkpoints appear under more than one organisation. Where the
+weights really are the same, rank disagreement between the two
+entries is evaluation noise with no ability difference behind it.
+A shared name is not by itself proof of shared weights -- two groups
+can publish different merges under one name -- so the replicate set
+is restricted to pairs whose aggregate accuracies agree to within
+0.1 percentage points, roughly fourteen items in fourteen thousand.
+
+  pairs sharing a checkpoint name : 15
+  of those, accuracy-identical    : 7
+
+quantity                                 median     mean     90th      max
+--------------------------------------------------------------------------
+aggregate-rank gap, replicates              1.0      2.4      5.6     11.0
+STEM-rank gap, replicates                   3.0      5.9     14.6     23.0
+aggregate-rank gap, all name pairs          5.0     23.0     78.0     92.0
+STEM-rank gap, all name pairs              10.0     24.4     71.0    114.0
+accuracy gap, all name pairs (pp)           0.2      3.6     15.5     17.5
+
+pair                                                             agg   STEM    dAcc
+-----------------------------------------------------------------------------------
+Columbia-NLP/gemma-2b-zephyr-dpo                                 852    855        
+wandb/gemma-2b-zephyr-dpo                                        860    868    1.74
+Columbia-NLP/gemma-2b-zephyr-sft                                 851    856        
+wandb/gemma-2b-zephyr-sft                                        859    866    1.67
+FelixChao/Llama-3-Petro-Instruct-v1                              654    612        
+PetroGPT/Llama-3-Petro-Instruct-v1                               649    601    0.21
+NousResearch/CodeLlama-34b-hf                                    898    871        
+codellama/CodeLlama-34b-hf                                       812    757   17.53
+NousResearch/Meta-Llama-3-8B-Instruct                            436    424        
+meta-llama/Meta-Llama-3-8B-Instruct                              447    401    0.06  *
+SJ-Donald/SOLAR-10.7B-slerp                                      409    500        
+jan-ai/Solar-10.7B-SLERP                                         501    540    1.03
+Zangs3011/falcon_7b_DolphinCoder                                 933    950        
+qblocks/falcon_7b_DolphinCoder                                   933    950    0.00  *
+codellama/CodeLlama-34b-Instruct-hf                              809    785        
+ehartford/CodeLlama-34b-Instruct-hf                              870    872   15.52
+codellama/CodeLlama-34b-Python-hf                                837    847        
+ehartford/CodeLlama-34b-Python-hf                                903    894   15.45
+cognitivecomputations/dolphin-2.2-yi-34b-200k                    797    764        
+ehartford/dolphin-2.2-yi-34b-200k                                795    761    0.21
+garage-bAInd/Platypus-30B                                        550    655        
+lilloukas/Platypus-30B                                           551    661    0.01  *
+huggingface/llama-30b                                            746    767        
+huggyllama/llama-30b                                             746    767    0.00  *
+microsoft/Phi-3-medium-4k-instruct                                36     38        
+unsloth/Phi-3-medium-4k-instruct                                  37     38    0.01  *
+microsoft/Phi-3-mini-4k-instruct                                 309    242        
+unsloth/Phi-3-mini-4k-instruct                                   311    239    0.01  *
+mistral-community/Mixtral-8x22B-v0.1                              69     57        
+mistralai/Mixtral-8x22B-v0.1                                      71     66    0.01  *
+
+
+TIE CONVENTION AND TOP-K RETENTION
+
+Accuracies tie: adjacent aggregate gaps reach 0.01 percentage
+points through the middle of the leaderboard. Ranks are competition
+ranks, so tied models share the better rank, and Top-K membership is
+reported two ways. Optimistic admits every model whose best-case
+rank is at most K; conservative admits only those whose worst-case
+rank is at most K.
+
+  models sharing an aggregate accuracy with another: 164
+
+                                  optimistic          conservative
+                         retained  displaced   retained  displaced
+------------------------------------------------------------------
+STEM, K = 10                80.0%      20.0%      80.0%      20.0%
+non-STEM, K = 10           100.0%       0.0%     100.0%       0.0%
+STEM, K = 50                78.0%      22.0%      78.0%      22.0%
+non-STEM, K = 50            92.0%       8.0%      92.0%       8.0%
+
+
+A BOOTSTRAP INTERVAL ON THE OBSERVED RATE
+
+STEM items resampled with replacement, 1000 draws. The
+aggregate ranking is held fixed, so the interval is over the
+sampling of STEM items alone.
+
+   K   observed     2.5%    97.5%       SD
+------------------------------------------
+  10      20.0%     10.0     30.0     4.62
+  50      22.0%     16.0     28.0     3.04
+
+
+WEIGHTED KENDALL AT MATCHED TEST LENGTH
+
+The published comparison is 0.9887 against 0.9634, but non-STEM is
+10889 items against STEM's 3153, and rank
+agreement with the aggregate rises with the number of items scored.
+Subsampling non-STEM to STEM's size, 200 draws, removes that.
+
+  tau_w, aggregate vs non-STEM (full)   : 0.9887
+  tau_w, aggregate vs STEM              : 0.9634
+  tau_w, aggregate vs matched non-STEM  : 0.9756   [0.9633, 0.9827]
+  draws at or below the STEM value      : 6 of 200   (p = 0.0348)
+
+Most of the published gap is test length: matching item count
+removes 52% of it, leaving
+0.0122 against the unmatched 0.0253.
+What remains is still one-sided: STEM sits below all but
+6 of 200 equally sized
+non-STEM draws. The asymmetry is real and small, and the
+matched figure is the one the paper should quote.
+
+
+THE AFFECTED STATISTICS, RE-RUN ON ONE MODEL PER CLUSTER
+
+The inversion correlation and the displacement rate are recomputed
+on the best-scoring member of each cluster, which is the choice a
+practitioner reading the leaderboard would make.
+
+Population                       N   r(theta, beta_s)          p   disp K=50
+----------------------------------------------------------------------------
+full sample                   1000             -0.772  1.27e-198       22.0%
+one per fine cluster           869             -0.773  2.52e-173       28.8%
+one per coarse cluster          50             -0.681   5.16e-08        0.0%
+
+Trimmed for the guessing floor, on the fine-deduplicated set:
+
+Trim                             N        r           p
+-------------------------------------------------------
+full                           869   -0.773   2.52e-173
+bottom quartile removed        652   -0.521    1.35e-46
+bottom half removed            435   -0.398    6.04e-18
+
+
+READING
+
+The aggregate Top 50 contains 40 distinct checkpoints and
+9 distinct base-model-and-size combinations. A
+displacement rate computed over it counts near-identical systems
+separately, and the paper now says so where the rate is reported.
+
+Weights re-evaluated under a different organisation disagree
+by a median of 1 aggregate ranks and 3 STEM ranks, reaching
+11 and 23 at the extreme. That is the leaderboard's
+own noise floor, measured on this population rather than
+imported from a perturbation study, and it is the scale
+against which the displacement figures should be read.
+
+The inversion correlation is not an artefact of redundancy: it
+is essentially unchanged when the population is reduced to one
+model per cluster, though the p-values are correspondingly
+larger and the paper reports the deduplicated N alongside them.
+
+================================================================================
+
+THE INVARIANCE TEST AS ONE INTERACTION MODEL
+
+Items: 14042   Subjects: 57   STEM items: 3153
+
+PREDICTOR MOMENTS BY PARTITION
+
+A cross-group difference in an unstandardised slope is partly a
+difference in the units the predictor is measured in. These are the
+moments the comparison in the main table implicitly assumes away.
+
+Indicator                 STEM mean   STEM SD   nS mean    nS SD  SD ratio
+--------------------------------------------------------------------------
+WSCG Depth                    3.650     2.896     4.222    4.037     0.717
+WSCG Nodes                   13.417    11.028    22.831   31.104     0.355
+Syntactic MDD                 2.902     0.658     2.937    0.637     1.033
+Syntactic Depth               4.354     1.503     4.761    1.999     0.752
+Zipf Rarity                   3.584     0.446     3.495    0.398     1.122
+Entity Density                7.697     9.362     6.781    9.142     1.024
+Lexical Concreteness          2.367     0.310     2.353    0.287     1.079
+AMR Depth                     5.771     1.570     6.247    1.978     0.794
+Adversarial Negation         -0.278     2.247     0.081    4.633     0.485
+
+Largest scale disparity: WSCG Nodes at 2.82x.
+
+
+RAW AND WITHIN-GROUP STANDARDISED CONTRASTS
+
+Standardised betas are computed inside each partition, so both
+predictor and outcome are on that partition's own scale and the
+contrast is free of units.
+
+Indicator                  b STEM   b nSTEM  raw diff   B STEM   B nSTEM  std diff      Holm
+--------------------------------------------------------------------------------------------
+WSCG Depth                 0.0602    0.0620   -0.0017   0.0734    0.1151   -0.0417 4.42e-01 
+WSCG Nodes                 0.0189   -0.0007    0.0197   0.0879   -0.0103    0.0982 2.53e-02*
+Syntactic MDD              0.3694    0.0146    0.3548   0.1023    0.0043    0.0980 4.70e-04*
+Syntactic Depth           -0.0584    0.0130   -0.0713  -0.0369    0.0119   -0.0488 2.88e-01 
+Zipf Rarity                0.2523   -0.0521    0.3044   0.0474   -0.0095    0.0569 2.23e-02*
+Entity Density             0.0356    0.0002    0.0354   0.1403    0.0009    0.1394 3.76e-11*
+Lexical Concreteness      -0.1642    0.5883   -0.7525  -0.0214    0.0778   -0.0992 5.28e-06*
+AMR Depth                  0.0523    0.0608   -0.0084   0.0346    0.0553   -0.0207 6.71e-01 
+Adversarial Negation      -0.0343   -0.0177   -0.0167  -0.0325   -0.0376    0.0052 8.04e-01 
+
+Surviving Holm on the standardised scale: 5 of 9.
+Sign reversals: 4 raw, 4 standardised (WSCG Nodes, Syntactic Depth, Zipf Rarity, Lexical Concreteness).
+
+
+THE JOINT TEST UNDER FOUR COVARIANCE ESTIMATORS
+
+The nine interaction terms are the nine cross-group contrasts, and
+their joint Wald statistic is the invariance test. Only the
+covariance estimator changes down this table.
+
+Estimator                                   W(9)            p
+-------------------------------------------------------------
+HC3, items independent                    138.36     2.25e-25
+CR1, clustered by subject                  33.13     1.27e-04
+CR2 Bell-McCaffrey, by subject             28.21     8.80e-04
+
+
+WILD CLUSTER BOOTSTRAP (9999 replicates)
+
+Rademacher weights are drawn once per subject and applied to the
+residuals of the model fitted under the null of no interaction, so
+the bootstrap distribution is the distribution of the statistic
+when invariance holds. This is the accepted reference distribution
+when the number of clusters is small, and 57 is small.
+
+  observed W(9), CR1        : 33.13
+  bootstrap mean            : 16.54   (nominal 9 if the chi-square reference were correct)
+  bootstrap 95th percentile : 34.68   (chi-square 16.92)
+  bootstrap 99th percentile : 48.08   (chi-square 21.67)
+  replicates at or above    : 596
+  bootstrap p               : 0.0597
+
+The bootstrap null has mean 16.5 against a nominal 9, so the
+asymptotic chi-square reference is anti-conservative at this
+cluster count by roughly the factor the small-cluster literature
+predicts. The asymptotic p is 1.27e-04; the
+bootstrap p is 0.0597, and the bootstrap is the one to quote.
+
+
+PER-INDICATOR CONTRASTS, CR2 WITH t(56) REFERENCE
+
+Small-cluster inference uses a t reference with clusters minus one
+degrees of freedom rather than a normal one.
+
+Indicator                 contrast   SE HC3   SE CR1   SE CR2   t CR2       Holm
+--------------------------------------------------------------------------------
+WSCG Depth                 -0.0017   0.0223   0.0296   0.0368   -0.05  1.00e+00 
+WSCG Nodes                  0.0197   0.0067   0.0100   0.0112    1.76  4.21e-01 
+Syntactic MDD               0.3548   0.0877   0.1195   0.1323    2.68  7.67e-02 
+Syntactic Depth            -0.0713   0.0395   0.0516   0.0559   -1.28  8.29e-01 
+Zipf Rarity                 0.3044   0.1051   0.1558   0.1644    1.85  4.16e-01 
+Entity Density              0.0354   0.0050   0.0092   0.0104    3.41  1.10e-02*
+Lexical Concreteness       -0.7525   0.1525   0.3340   0.3899   -1.93  4.11e-01 
+AMR Depth                  -0.0084   0.0301   0.0512   0.0591   -0.14  1.00e+00 
+Adversarial Negation       -0.0167   0.0199   0.0189   0.0203   -0.82  1.00e+00 
+
+Surviving Holm under CR2: 1 of 9 (Entity Density).
+Median SE inflation, HC3 to CR2: 1.65x.
+
+
+THE SAME BOOTSTRAP, ONE CONTRAST AT A TIME
+
+A nine-degree-of-freedom joint test spends its power evenly over
+nine contrasts, four of which the stratified fit already shows to
+be null. Bootstrapping each t statistic separately, against the
+same null-imposed distribution, asks which individual contrasts
+survive.
+
+Indicator                  t CR1    boot p      Holm
+----------------------------------------------------
+WSCG Depth                 -0.06    0.9673   1.0000 
+WSCG Nodes                  1.96    0.0661   0.4627 
+Syntactic MDD               2.97    0.0151   0.1208 
+Syntactic Depth            -1.38    0.2094   0.8376 
+Zipf Rarity                 1.95    0.0849   0.4627 
+Entity Density              3.85    0.0015   0.0135*
+Lexical Concreteness       -2.25    0.0741   0.4627 
+AMR Depth                  -0.16    0.9024   1.0000 
+Adversarial Negation       -0.88    0.3900   1.0000 
+
+Surviving Holm on bootstrap p-values: 1 of 9 (Entity Density).
+
+
+READING
+
+The interaction reparameterisation makes the design one model
+and one test, and the estimator ladder shows exactly what the
+independence assumption was buying. Items are not independent
+draws, and correcting for that costs the joint test most of its
+apparent force: W(9) falls from 138 to 28, standard
+errors inflate by a median 1.65x, and against a
+bootstrap reference the joint p is 0.060 rather than 2e-25.
+
+At the joint level the honest statement is that the
+rejection is marginal once subject clustering is respected
+and a bootstrap reference is used: p = 0.060, not
+significant at the conventional threshold. We report it that
+way. What does not depend on the joint test is the
+individual contrast that survives every correction applied
+here, including Holm over the family of nine:
+  Entity Density
+The claim the paper can support is therefore specific rather
+than omnibus -- named indicators whose contribution to
+difficulty is domain-dependent -- and it is supported
+independently by the confirmatory two-dimensional IRT fit,
+which does not use these standard errors at all.
+
+Standardising within partitions does not dissolve the contrasts,
+and it does not manufacture them either: the same indicators
+separate on both scales. Reporting the standardised column
+removes a units objection that the raw column cannot answer.
+
+================================================================================
+
+FUNCTIONAL FORM AND COMMON SUPPORT
+
+Items: 14042   STEM: 3153   non-STEM: 10889
+Focal indicators: Syntactic MDD, Entity Density, Lexical Concreteness
+
+OVERLAP OF THE PREDICTOR DISTRIBUTIONS
+
+Support is the 1%-99% range within each
+partition; the common support is the intersection.
+
+Indicator                           STEM range           nSTEM range     kept
+-----------------------------------------------------------------------------
+Syntactic MDD                   [1.333, 4.895]        [1.250, 4.567]    97.7%
+Entity Density                 [0.000, 37.786]       [0.000, 41.667]    98.7%
+Lexical Concreteness            [1.673, 3.155]        [1.695, 3.038]    97.8%
+
+
+THE CONTRAST, FULL SAMPLE AND ON COMMON SUPPORT
+
+The common-support refit drops items outside the overlap for that
+indicator only; all nine predictors stay in the model.
+
+Indicator               sample             b STEM   b nSTEM      diff       Z          p       N
+------------------------------------------------------------------------------------------------
+Syntactic MDD           full               0.3694    0.0146    0.3548    4.05   5.21e-05   14042
+                        common support     0.4083    0.0168    0.3916    3.90   9.67e-05   13722  sign holds
+Entity Density          full               0.0356    0.0002    0.0354    7.03   2.03e-12   14042
+                        common support     0.0353    0.0036    0.0317    5.49   3.94e-08   13863  sign holds
+Lexical Concreteness    full              -0.1642    0.5883   -0.7525   -4.94   7.98e-07   14042
+                        common support    -0.1479    0.7601   -0.9080   -5.13   2.97e-07   13729  sign holds
+
+
+IS ONE STRAIGHT LINE ADEQUATE?
+
+The focal indicator is replaced by a four-knot restricted cubic
+spline inside each partition, the other eight staying linear. The F
+test compares the linear model against the spline model on the same
+items; a rejection means the relationship is curved.
+
+Indicator               partition      R2 lin   R2 spl   F(2, .)          p
+----------------------------------------------------------------------------
+Syntactic MDD           STEM           0.0792   0.0795      0.44   6.44e-01
+                        non-STEM       0.0380   0.0411     17.43   2.76e-08
+Entity Density          STEM           0.0792   0.0803      1.86   1.56e-01
+                        non-STEM       0.0380   0.0385      2.79   6.16e-02
+Lexical Concreteness    STEM           0.0792   0.0797      0.90   4.07e-01
+                        non-STEM       0.0380   0.0408     15.86   1.32e-07
+
+
+THE PARTIAL RELATIONSHIP, ON COMMON SUPPORT
+
+Fitted spline contribution to difficulty, centred within partition,
+at nine equally spaced points of the common support. A monotone
+column is a relationship a straight line can summarise; a turning
+point is one it cannot.
+
+Syntactic MDD
+      1.33    1.74    2.14    2.55    2.95    3.35    3.76    4.16    4.57
+  STEM       -0.471  -0.398  -0.323  -0.220  -0.055   0.125   0.290   0.448   0.605
+  non-STEM   -0.156  -0.079  -0.001   0.089   0.202   0.224   0.089  -0.092  -0.275
+
+Entity Density
+      0.00    4.72    9.45   14.17   18.89   23.62   28.34   33.06   37.79
+  STEM       -0.716  -0.453  -0.222  -0.046   0.087   0.193   0.289   0.386   0.482
+  non-STEM   -0.040   0.026   0.066   0.071   0.050   0.015  -0.024  -0.063  -0.102
+
+Lexical Concreteness
+      1.69    1.86    2.03    2.20    2.37    2.53    2.70    2.87    3.04
+  STEM        0.178   0.118   0.057  -0.007  -0.075  -0.113  -0.098  -0.055  -0.007
+  non-STEM   -0.183  -0.236  -0.275  -0.213   0.033   0.253   0.268   0.208   0.146
+
+READING
+
+On common support the contrasts hold. Restricting both
+partitions to the range of the predictor they share changes no
+sign and no conclusion for Syntactic MDD, Entity Density, Lexical Concreteness,
+so none of them is an artefact of the two domains occupying
+different regions of the predictor.
+
+Linearity is a different matter, and it does not hold uniformly.
+A four-knot spline improves on the straight line in Syntactic MDD (non-STEM), Lexical Concreteness (non-STEM),
+all of them outside STEM. The fitted curves say what the
+linear coefficients cannot: in STEM both Syntactic MDD and
+Entity Density rise monotonically with difficulty across the
+whole common support, while outside STEM each traces a shallow
+hump that a single slope averages to near zero. The domain
+difference is therefore between a monotone relationship and a
+non-monotone one, which is a sharper statement than a
+difference of slopes and survives the objection that motivated
+this check.
+
+Lexical Concreteness is the one to downgrade. Its non-STEM
+relationship reverses direction inside the common support --
+falling to a minimum near the middle of the range and rising
+after it -- so the positive linear coefficient summarises a shape
+rather than describing one, and the cross-domain sign reversal is
+a reversal of that summary. Section 4.2 now states it as a
+difference in the linear approximation, and the reversal is no
+longer offered as the paper's most interesting qualitative
+finding.
+
+================================================================================
+
+LABEL ERRORS AND TRAINING CONTAMINATION
+
+PART 1: MMLU-REDUX
+
+MMLU-Redux 2.0 re-annotates 100 items in each of the 57 subjects.
+Items are matched to ours on subject and normalised question text.
+
+  re-annotated items in the release : 5700
+  matched into our item pool        : 5984
+  distinct stems in our pool        : 13438 of 14042
+  The match count exceeds the annotation count because MMLU
+  itself repeats 604 item stems within a subject, so one
+  re-annotated question can correspond to more than one of our
+  items. Every such item inherits the same verdict.
+  of those, clean                   : 5610
+  of those, flagged as erroneous    : 374   (6.25%)
+
+  error types:
+    bad_question_clarity                131
+    wrong_groundtruth                   108
+    multiple_correct_answers             38
+    no_correct_answer                    36
+    expert                               32
+    bad_options_clarity                  29
+
+  error rate in STEM     : 4.70%   (1916 annotated)
+  error rate outside STEM: 6.98%   (4068 annotated)
+
+  mean difficulty, flagged items : +1.858   (SD 3.084)
+  mean difficulty, clean items   : -0.100   (SD 2.161)
+  difference                     : t = 12.08, p = 7.64e-29
+  Flagged items are harder, which is what a wrong key predicts:
+  models that reason correctly are scored wrong.
+
+Refits. The verified subset is the 5,700 re-annotated items
+minus those flagged; the pruned pool is all 14,042 items minus the
+flagged ones, which keeps the unannotated majority.
+
+Item pool                               N   STEM R2  nSTEM R2      W(9)           p
+-----------------------------------------------------------------------------------
+published, all items                14042    0.0792    0.0380    138.36    2.25e-25
+verified subset only                 5610    0.0934    0.0141     84.45    2.10e-14
+all items minus flagged             13668    0.0852    0.0442    140.71    7.37e-26
+annotated subset, unfiltered         5984    0.0828    0.0115     82.79    4.50e-14
+
+
+PART 2: A COHORT SPLIT FOR CONTAMINATION
+
+Models are assigned to a generation from the architecture markers
+in their names. The early cohort is the Pythia / Falcon / Llama-2
+era; the recent cohort is the 2024 generation, trained after MMLU
+had become a headline leaderboard metric and is correspondingly
+more exposed to it.
+
+  early cohort  :   99 models
+  recent cohort :  606 models
+  unassigned    :  295 models
+
+  difficulty correlation between cohorts : r = 0.8317   (Spearman 0.8505)
+  early cohort b  : mean +0.003, SD 1.584
+  recent cohort b : mean +0.033, SD 2.072
+
+That correlation needs a ceiling, because the early cohort is
+99 models and difficulty estimated from 99 raters is
+noisier than difficulty estimated from a thousand. Two disjoint
+random cohorts of 99 models each, drawn without regard to
+generation, agree at:
+
+  same-size random-cohort ceiling        : r = 0.9672
+  early against recent                   : r = 0.8317   (86% of the ceiling)
+
+A contaminated cohort should find leaked items easy that an
+uncontaminated one finds hard, which would depress the observed
+correlation relative to that ceiling. It does not depress it much.
+
+The domain contrast, estimated separately within each cohort:
+
+Difficulty from                STEM R2  nSTEM R2    ratio      W(9)           p
+-------------------------------------------------------------------------------
+all 1,000 models                0.0792    0.0380     2.08    138.36    2.25e-25
+early cohort                    0.0712    0.0505     1.41    124.14    1.90e-22
+recent cohort                   0.0839    0.0577     1.45    135.81    7.54e-25
+
+  correlation between the two cohorts' nine contrast vectors: 0.980
+
+
+PART 3: BOTH AT ONCE
+
+The strictest available pool: flagged items removed, difficulty
+estimated on the early cohort alone.
+
+  N = 13668   STEM R2 0.0751   non-STEM R2 0.0552
+  W(9) = 126.57, p = 6.02e-23
+
+
+READING
+
+Label error is real and measurable at 6.2% of the re-annotated
+items, and flagged items are systematically harder, exactly as a
+wrong key predicts. It is not, however, what produces the domain
+contrast: dropping every flagged item leaves both partition fits
+and the joint test essentially where they were, and refitting on
+the verified subset alone -- a fortieth of the original pool, with
+the loss of power that implies -- does not reverse the ordering.
+
+Contamination is likewise not the mechanism. Difficulty
+estimated on models from the Pythia and Llama-2 era correlates
+at r = 0.832 with difficulty estimated on the 2024
+generation, against a same-size sampling ceiling of 0.967,
+and the domain contrast appears at similar magnitude
+in both cohorts with contrast vectors correlated at 0.98. If
+memorisation prevalence were driving the structure, the two
+cohorts would not agree this closely about which items are hard.
+
+================================================================================
+
+HELD-OUT VALIDATION FOR THE CONFIRMATORY MIRT
+
+Models: 1000   Items: 14042   Cells: 14042000
+Held out: 703696 cells (5.01%)
+
+LOG-LIKELIHOOD, TRAINING AND HELD-OUT CELLS
+
+Per-cell figures are the total divided by the number of cells, so
+the two columns are directly comparable.
+
+Model                     train total   train/cell   held-out total  held-out/cell
+----------------------------------------------------------------------------------
+unidimensional 2PL           -4938472     -0.37025          -261438       -0.37152
+confirmatory 2D              -4932110     -0.36977          -261195       -0.37118
+
+  held-out improvement, total    : +243.6 nats
+  held-out improvement, per cell : +0.000346 nats
+  training improvement, per cell : +0.000477 nats
+  paired SE over held-out cells  : 29.8 nats
+  z on the held-out difference   : 8.18
+
+The second dimension pays for itself out of sample. The gain
+is small per cell, as it must be when the two abilities
+correlate above 0.96, but it is a gain on responses neither
+model was fitted to, which extra parameters alone cannot buy.
+
+
+HOW FAR MODELS SIT OFF THE IDENTITY LINE
+
+Both abilities are standardised, so the gap is in pooled SD units
+and a model at +1 is one standard deviation better at STEM than its
+non-STEM standing predicts.
+
+  latent correlation on the training cells : 0.9651
+  SD of the standardised gap               : 0.1922
+  expected under rho                       : 0.2642
+
+   |gap| exceeds   models    share
+----------------------------------
+            0.25      165    16.5%
+            0.50       23     2.3%
+            1.00        0     0.0%
+            1.50        0     0.0%
+
+Largest deviations:
+  model                                                    gap
+  Qwen/Qwen2-72B                                         +0.88
+  Weyaxi/Qwen-72B-Llama                                  +0.77
+  01-ai/Yi-1.5-34B-Chat                                  +0.69
+  01-ai/Yi-1.5-34B-32K                                   +0.62
+  01-ai/Yi-1.5-34B                                       +0.62
+  vicgalle/Configurable-Yi-1.5-9B-Chat                   +0.60
+  deepseek-ai/deepseek-math-7b-base                      +0.59
+  01-ai/Yi-1.5-9B-Chat                                   +0.58
+  cognitivecomputations/dolphin-2.9.1-yi-1.5-9b          +0.57
+  Azure99/blossom-v5.1-34b                               +0.57
+
+  median |gap| 0.08, 90th percentile 0.36, 99th 0.56
+
+The scatter is not uniform. Most models sit close to the
+identity line, and the aggregate describes them adequately; a
+minority sit far enough off it that a single number does not.
+That is the same shape as the rank-displacement result, and it
+is the honest version of the practical claim: the aggregate is a
+good summary for most of the population and a poor one for an
+identifiable minority, rather than a poor summary throughout.
+
+================================================================================
+
+HELLASWAG TRANSFER TEST
+
+Models with HellaSwag per-item responses: 219
+Items: 10042
+Partition: 3243 ActivityNet vs 6799 WikiHow
+Split-half difficulty reliability at this model count: r = 0.9767 (Spearman-Brown 0.9882)
+Difficulty range [-3.026, 6.023], mean -0.131
+
+--- HellaSwag: ActivityNet (A) vs WikiHow (B) ---
+  group sizes: 3243 vs 6799
+  R2: 0.0037 vs 0.0035   gap +0.0002   pooled 0.0247
+  cross-validated R2: -0.0043 vs 0.0005   pooled 0.0207
+  joint Wald W(8) = 3.64, p = 8.880e-01
+  indicator                      b(A)       b(B)        Z
+  WSCG_Depth                  -0.0358    -0.0169    -0.65
+  WSCG_Nodes                   0.0004     0.0010    -0.04
+  Syntactic_MDD               -0.1053     0.0617    -1.30
+  Syntactic_Depth             -0.0319    -0.0180    -0.34
+  Knowledge_Zipf_Rarity        0.1804     0.0300     0.84
+  Knowledge_NER_Density        0.0062     0.0058     0.02
+  Semantic_Concreteness        0.3178     0.2839     0.15
+  Adversarial_Score            0.0017     0.0152    -0.16
+  permutation null over 2000 draws: observed gap +0.0002, null mean +0.0013, null max |gap| 0.0280, p = 0.9795
+
+MMLU control refitted on the same 219 models, same eight indicators.
+
+--- MMLU control: STEM (A) vs non-STEM (B) ---
+  group sizes: 3153 vs 10889
+  R2: 0.0878 vs 0.0495   gap +0.0383   pooled 0.0463
+  cross-validated R2: 0.0805 vs 0.0477   pooled 0.0442
+  joint Wald W(8) = 150.48, p = 1.558e-28
+  indicator                      b(A)       b(B)        Z
+  WSCG_Depth                   0.0584     0.0668    -0.50
+  WSCG_Nodes                   0.0153     0.0000     3.14
+  Syntactic_MDD                0.2933     0.0415     3.77
+  Syntactic_Depth             -0.0560     0.0131    -2.27
+  Knowledge_Zipf_Rarity        0.1525    -0.0532     2.50
+  Knowledge_NER_Density        0.0312    -0.0003     8.16
+  Semantic_Concreteness       -0.0974     0.5299    -5.25
+  Adversarial_Score           -0.0228    -0.0152    -0.50
+  permutation null over 2000 draws: observed gap +0.0383, null max |gap| 0.0287, p = 0.0005
+
+SURFACE BASELINE (word count only), cross-validated R2
+  HellaSwag: 0.0148
+  MMLU: word_count unavailable
+
+================================================================================
+
+HELLASWAG: DIFFICULTY CARRIED BY THE ENDINGS
+
+Stem-text alignment check: 0 mismatches of 10042
+
+Correlation of each ending indicator with IRT difficulty:
+
+Indicator                             mean        SD   r with b
+---------------------------------------------------------------
+Ending_KeyDistractorSim             0.4403    0.1433    -0.0911
+Ending_MaxDistractorSim             0.5409    0.1522    -0.1019
+Ending_DistractorHomogeneity        0.4386    0.1479     0.0203
+Ending_LengthDispersion             0.2244    0.1100     0.0761
+Ending_KeyLengthAdvantage           0.1786    4.0431    -0.0547
+Ending_StemKeyAdvantage             0.0374    0.1643    -0.1916
+
+
+CROSS-VALIDATED R-SQUARED, WITHIN AND ACROSS SOURCE
+
+Partition           N   stem-only   endings   combined
+------------------------------------------------------
+Pooled          10042      0.0218    0.0495     0.0712
+ActivityNet      3243     -0.0030    0.0820     0.0809
+WikiHow          6799      0.0009    0.0376     0.0389
+
+
+SOURCE INVARIANCE UNDER EACH FEATURE SET
+
+Feature set        k   ActNet R2  WikiHow R2        W   df          p
+---------------------------------------------------------------------
+stem-only          8      0.0037      0.0035     3.64    8   8.88e-01
+endings            6      0.0843      0.0395    65.33    6   3.70e-12
+combined          14      0.0890      0.0429    72.85   14   5.86e-10
+
+
+READING
+
+Within ActivityNet the stem-only framework cross-validates at -0.0030 and the
+ending indicators at 0.0820; within WikiHow, 0.0009 against 0.0376. Reading
+the endings recovers difficulty variance that reading the context cannot,
+on the same items and the same difficulty estimates.
+
+That confirms the diagnosis offered for the transfer null rather than
+explaining it away. HellaSwag's difficulty is located in the ending set by
+construction, so a stem-only instrument returning nothing there is the
+expected result, not evidence that the instrument is broken. It also
+establishes the scope condition directly: these indicators measure
+difficulty that is carried by the text the model must read and reason
+over, and not difficulty manufactured in the response options.
+
+================================================================================
+
+WSCG CONVERGENT VALIDITY
+
+Correlations between the shipped WSCG indicators and an externally
+annotated measure of reasoning demand, with question length as the
+competing explanation.
+
+--- GSM8K (N = 1301), criterion: annotated solution steps ---
+
+Predictor              Pearson r           p   Spearman
+-------------------------------------------------------
+WSCG Depth                0.2182    1.71e-15     0.2145
+WSCG Nodes                0.3904    1.29e-48     0.3860
+Word count                0.3636    6.21e-42     0.3509
+
+  Partial r(WSCG Depth, criterion | word count) = 0.0864 (p = 1.82e-03)
+  Partial r(WSCG Nodes, criterion | word count) = 0.1550 (p = 1.92e-08)
+  R2, word count only:            0.1322
+  R2, word count + WSCG:          0.1534
+
+--- MATH (N = 1187), criterion: human difficulty level ---
+
+Predictor              Pearson r           p   Spearman
+-------------------------------------------------------
+WSCG Depth                0.1463    4.11e-07     0.1631
+WSCG Nodes                0.2068    6.20e-13     0.3364
+Word count                0.2946    3.41e-25     0.3297
+
+  Partial r(WSCG Depth, criterion | word count) = 0.0219 (p = 4.51e-01)
+  Partial r(WSCG Nodes, criterion | word count) = -0.0128 (p = 6.59e-01)
+  R2, word count only:            0.0868
+  R2, word count + WSCG:          0.0891
+
+
+READING
+
+The result is positive on one criterion and null on the other, and the
+difference between them is interpretable rather than awkward.
+
+Against GSM8K's annotated solution steps, WSCG Nodes correlates at 0.390
+and outperforms word count (0.364). More to the point, both indicators
+retain an independent association once length is held fixed (partial r =
+0.155 for nodes, p = 1.9e-08; 0.086 for depth, p = 1.8e-03), and adding
+them to a length-only model raises R2 from 0.1322 to 0.1534. The criterion
+was produced by that dataset's annotators for their own purposes, is not
+derivable from the question text, and was not consulted when the weights
+were set. That is convergent validity, and it is incremental over length.
+
+Against MATH's human difficulty levels it is not. Word count predicts the
+level better than either WSCG indicator (0.295 against 0.207 and 0.146),
+and neither retains a partial association once length is controlled
+(0.022 and -0.013, both n.s.). We report this rather than omitting it.
+
+The two criteria are not measuring the same thing. GSM8K step counts are a
+direct tally of sequential inferential operations, which is what the WSCG
+is built to capture. A MATH difficulty level is a holistic judgment that
+folds in advanced content knowledge, notation and problem novelty, most of
+which the WSCG does not claim to measure and none of which it reads. The
+honest statement is therefore narrow: the WSCG tracks the number of
+reasoning steps an item demands, beyond how long the item is, and does not
+track overall perceived difficulty. That is the construct the paper claims
+for it, and the boundary is worth stating explicitly.
+
+Effect sizes are modest throughout, and this is convergent validity for the
+indicator rather than calibration of the weight tiers. The interval spacing
+of the tiers remains where the sensitivity analysis leaves it: unvalidated
+in magnitude, immaterial to the conclusions across 123 perturbation schemes.
